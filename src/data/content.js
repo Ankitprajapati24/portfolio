@@ -1,19 +1,33 @@
-// Portfolio facts transcribed from Ankit_Prajapati_Resume.pdf.
+// All portfolio facts live here (transcribed from Ankit_Prajapati_Resume.pdf).
+// `title` is the section heading. `speak` is what "Know about me" reads aloud.
+
 export const NAME = "Ankit Prajapati";
+
 export const SURNAME_SCRIPTS = [
-  { text: "Prajapati", lang: "English" }, { text: "प्रजापति", lang: "Hindi" },
-  { text: "প্রজাপতি", lang: "Bengali" }, { text: "ಪ್ರಜಾಪತಿ", lang: "Kannada" },
-  { text: "ప్రజాపతి", lang: "Telugu" }, { text: "પ્રજાપતિ", lang: "Gujarati" },
-  { text: "普拉贾帕蒂", lang: "Chinese" }, { text: "프라자파티", lang: "Korean" },
+  { text: "प्रजापति", lang: "Hindi" },
+  { text: "ಪ್ರಜಾಪತಿ", lang: "Kannada" },
+  { text: "প্রজাপতি", lang: "Bengali" },
+  { text: "ప్రజాపతి", lang: "Telugu" },
+  { text: "પ્રજાપતિ", lang: "Gujarati" },
+  { text: "பிரஜாபதி", lang: "Tamil" },
+  { text: "Prajapati", lang: "English" },
 ];
-export const ABOUT = {
-  greeting: "Hello",
-  answer: [
-    "I'm Ankit Prajapati — I build across AI, connected devices, and full-stack software. I'm pursuing a BS in Data Science at IIT Madras and a B.Tech in Computer Science at IIST, Indore.",
-    "My projects turn ideas into working systems: detecting power-line faults at the edge, translating sign language into speech, and generating backends from a prompt. I like owning the whole line — from the model to the product people actually use.",
-  ],
-  sticker: "Vision → Devices → Backend",
+
+export const HERO = {
+  tagline: "AI & machine learning · Connected devices · Full-stack",
+  speak: "Hi! I'm Ankit Prajapati. Let me tell you a little about myself.",
 };
+
+export const ABOUT = {
+  label: "About",
+  title: "A bit about me",
+  stickerWords: ["voice", "vision", "edge devices", "backends"],
+  answer: [
+    "I'm Ankit Prajapati. I build across AI, connected devices, and full-stack software. I'm pursuing a BS in Data Science at IIT Madras and a B.Tech in Computer Science at IIST, Indore.",
+    "My projects turn ideas into working systems: detecting power-line faults at the edge, translating sign language into speech, and generating backends from a prompt. I like owning the whole line, from the model to the product people actually use.",
+  ],
+};
+
 export const SKILL_GROUPS = [
   { title: "Languages", items: ["Python", "C/C++", "Java", "JavaScript", "SQL"] },
   { title: "Frameworks & tools", items: ["Flask", "Django", "OpenCV", "React", "Node.js", "PyTorch", "TensorFlow"] },
@@ -22,47 +36,147 @@ export const SKILL_GROUPS = [
   { title: "Developer toolkit", items: ["Linux", "Git", "FastAPI", "Streamlit", "Hugging Face", "Firebase"] },
 ];
 export const SKILLS = SKILL_GROUPS.flatMap((g) => g.items);
-export const TERMINAL_SCRIPT = [
-  { cmd: "whoami", out: ["ankit_prajapati — AI · IoT · full-stack", "BS Data Science, IIT Madras · B.Tech CSE, IIST"] },
-  { cmd: "cat research.txt", out: ["focus     → sequential decision-making & MDPs", "exploring → value iteration, policy iteration, Q-Learning", "workflow  → Python · TensorBoard · Git · Linux"] },
-  { cmd: "python proud.py", out: ["SERA → Smart India Hackathon 2025 winner", "SignEcho → Apratim Srajan 2025 winner"] },
-];
-export const PROJECTS = [
-  { id: "01", title: "Backend Pilot", desc: "A natural-language prompt becomes a backend: APIs, folder structure, and tests. Built with LLM-powered generation and structured prompt pipelines.", tags: ["LLMs", "Groq API", "Code generation"], href: "https://backendpilot.onrender.com/", linkLabel: "Visit project" },
-  { id: "02", title: "SERA", desc: "Edge AI for power-line safety. Detects high-impedance faults using an LSTM model, with automatic phase isolation and remote monitoring.", tags: ["IoT", "Edge AI", "LSTM"], award: "SIH 2025 · Winner", href: "https://github.com/Ankitprajapati24/sera_dashboard_main.git", linkLabel: "View source" },
-  { id: "03", title: "SignEcho", desc: "Real-time sign language to speech and text. A CNN + MediaPipe pipeline achieved 79.6% accuracy in a user-tested web app.", tags: ["OpenCV", "PyTorch", "MediaPipe"], award: "Apratim 2025 · Winner", href: "https://github.com/Ankitprajapati24/SignEcho", linkLabel: "View source" },
-  { id: "04", title: "EduVote", desc: "A digital voting system for student elections, with secure sign-in, role-based access, and real-time election analytics.", tags: ["React", "Node.js", "MongoDB", "Firebase Auth"], href: null },
-  { id: "05", title: "Saathi", desc: "A smart medicine dispenser and health companion: reminders, heartbeat and fall detection, and caregiver alerts. I contributed backend logic and sensor integration.", tags: ["ESP32", "TensorFlow", "Flutter", "Firebase"], href: "https://saathi.flutterflow.app/", linkLabel: "Visit project" },
-];
-export const HACKATHON_BADGES = [
-  { title: "Winner", sub: "Smart India Hackathon · 2025", href: "https://drive.google.com/file/d/1YKdYIWOJF4H6yAqfipCRtujbSSY5QZrv/view?usp=sharing" },
-  { title: "Winner", sub: "Apratim Srajan, IIST Indore · 2025", href: "https://drive.google.com/file/d/1R9o6EwuZOOrk80raAnE0N3ViaA9hMpTP/view?usp=drive_link" },
-  { title: "Finalist", sub: "Hacksagon, ABV-IIITM Gwalior · 2025", href: "https://drive.google.com/drive/folders/1haNkRVWD4txV2-kD69WT6gGzA2aleYr1?usp=drive_link" },
-  { title: "Finalist", sub: "S&T IISF, IIT Guwahati · 2024", href: "https://drive.google.com/file/d/1I2Gldni2k94B1yxdMMZ-XsJxkE3F3mV3/view?usp=sharing" },
-  { title: "Runner-up", sub: "Cognizance Watch Tower, IIT Roorkee · 2023" },
-];
-export const EXPERIENCE = [
-  { org: "IIT Madras", role: "Undergraduate Research Intern", period: "Jul 2026 – Present", note: "Research with Prof. Rahul H. Meshram, Dept. of EE: MDPs, dynamic programming and Q-Learning. Built a Python grid-world to compare planning and model-free learning." },
-  { org: "Klover.AI", role: "AI Engineer · Open Source Contributor", period: "Jan 2025 – Apr 2025", note: "Built multi-agent workflows for automated decision-making and fault recovery. Collaborated remotely on modular, reusable agents and deployable AI pipelines." },
-];
-export const EDUCATION = [
-  { org: "IIT Madras", degree: "BS in Data Science", period: "May 2023 – May 2027" },
-  { org: "IIST, Indore", degree: "B.Tech in Computer Science Engineering", period: "Aug 2023 – Jun 2027" },
-  { org: "Delhi Public School, Sagar", degree: "Higher Secondary · PCM + Informatics Practices", period: "Apr 2021 – 2022" },
-];
-export const BUILD_SPECS = ["React", "Tailwind", "Framer Motion", "Lenis", "Web Speech API", "Built by voice with Wispr Flow + Emergent"];
-export const CONTACT = {
-  email: "ankitp2412@gmail.com", phone: "+91 73890 18024", phoneHref: "+917389018024",
-  github: { label: "GitHub", href: "https://github.com/Ankitprajapati24" },
-  linkedin: { label: "LinkedIn", href: "https://www.linkedin.com/in/ankitprajapati04/" },
-  showcase: null,
-  resume: "assets/Ankit_Prajapati_Resume.pdf",
+
+export const STACK = {
+  label: "Stack",
+  title: "What I work with",
+  speak:
+    "Here's what I work with. My main languages are Python, C and C plus plus, Java, JavaScript and SQL. I build with Flask, Django, React, Node.js and FastAPI, and for machine learning I use PyTorch, TensorFlow, OpenCV, LangChain and Hugging Face. I'm comfortable with LLMs, RAG and prompt engineering, and I live in Linux and Git every day.",
 };
-export const MARQUEE_ITEMS = ["AI & Full-Stack", "Vision → Devices → Backend", "SIH 2025 Winner", "Open Source", "Data Science"];
-export const ECHO_QUIPS = [
-  "Hi! I'm Echo — ask me about Ankit.",
-  "Curious about SERA? That's a good story.",
-  "Type a question, or let's talk.",
+
+export const NOW = {
+  label: "Now",
+  title: "What I'm doing right now",
+  script: [
+    { cmd: "whoami", out: ["ankit_prajapati — AI · IoT · full-stack", "BS Data Science, IIT Madras · B.Tech CSE, IIST Indore"] },
+    {
+      cmd: "cat now.txt",
+      out: [
+        "role      → Undergraduate Research Intern, IIT Madras (Jul 2026 – present)",
+        "guide     → Prof. Rahul H. Meshram, Dept. of Electrical Engineering",
+        "topics    → MDPs · dynamic programming · Q-Learning",
+        "built     → a Python grid-world comparing planning and model-free learning",
+      ],
+    },
+  ],
+  speak:
+    "Right now, I'm an undergraduate research intern at IIT Madras, working with Professor Rahul H. Meshram in the Department of Electrical Engineering. I'm studying Markov decision processes, dynamic programming and Q-Learning, and I built a Python grid-world to compare planning with model-free learning.",
+};
+
+export const PROJECTS = [
+  { id: "signecho", title: "SignEcho", app: { icon: "hand", tone: "sun", line: "Sign language → speech" }, desc: "Real-time sign language to speech and text. A CNN + MediaPipe pipeline achieved 79.6% accuracy in a user-tested web app.", tags: ["OpenCV", "PyTorch", "MediaPipe"], award: "Apratim Srajan 2025 · Winner", href: "https://github.com/Ankitprajapati24/SignEcho", linkLabel: "View source" },
+  { id: "archflow", title: "ArchFlow", latest: true, desc: "Describe a software idea in plain English and get structured architecture designs, UML diagrams (ERD, class, sequence, activity, DFD), SQL schemas and a complete SRS document, ready to export as PDF, DOCX, PNG or SQL.", tags: ["AI", "System design", "UML", "Mermaid.js", "SQL"], href: "https://arcflow.codebread.fun", linkLabel: "Visit project", images: ["assets/projects/archflow.jpg", "assets/projects/archflow-2.jpg"], app: { icon: "workflow", tone: "ink" } },
+  { id: "backend-pilot", title: "Backend Pilot", desc: "A natural-language prompt becomes a backend: APIs, folder structure, and tests. Built with LLM-powered generation and structured prompt pipelines.", tags: ["LLMs", "Groq API", "Code generation"], href: "https://backendpilot.onrender.com/", linkLabel: "Visit project", images: ["assets/projects/backend-pilot.jpg"], app: { icon: "server", tone: "accent" } },
+  { id: "sera", title: "SERA", desc: "Edge AI for power-line safety. Detects high-impedance faults using an LSTM model, with automatic phase isolation and remote monitoring.", tags: ["IoT", "Edge AI", "LSTM"], award: "SIH 2025 · Winner", href: "https://github.com/Ankitprajapati24/sera_dashboard_main.git", linkLabel: "View source", app: { icon: "zap", tone: "ink", line: "Edge AI · Power-line safety" } },
+  { id: "eduvote", title: "EduVote", desc: "A digital voting system for student elections, with secure sign-in, role-based access, and real-time election analytics.", tags: ["React", "Node.js", "MongoDB", "Firebase Auth"], href: null, app: { icon: "vote", tone: "sun", line: "Student elections, online" } },
+  { id: "saathi", title: "Saathi", desc: "A smart medicine dispenser and health companion: reminders, heartbeat and fall detection, and caregiver alerts. I contributed backend logic and sensor integration.", tags: ["ESP32", "TensorFlow", "Flutter", "Firebase"], href: "https://saathi.flutterflow.app/", linkLabel: "Visit project", app: { icon: "heart-pulse", tone: "accent", line: "Health companion · IoT" } },
 ];
-export const ECHO_GREETING = "Hey, I'm Echo! Ankit's little sidekick. What would you like to know — his projects, research, or tech stack?";
-export const ECHO_OFFLINE_REPLIES = ["My AI connection is unavailable. Ankit's projects, experience, and résumé are all on this page. You can reach him at ankitp2412@gmail.com."];
+export const FEATURED = PROJECTS[0];
+export const OTHER_PROJECTS = PROJECTS.slice(1);
+
+export const PROUD = {
+  label: "Featured",
+  title: "The one I'm proudest of",
+  stat: { value: "79.6%", label: "accuracy in a user-tested web app" },
+  pipeline: ["Sign", "MediaPipe", "CNN", "Speech + text"],
+  speak:
+    "The project I'm proudest of is SignEcho. It translates sign language into speech and text in real time. A CNN and MediaPipe pipeline reached 79.6 percent accuracy in a user-tested web app, and it won Apratim Srajan 2025 at IIST Indore.",
+};
+
+export const BUILT = {
+  label: "Projects",
+  title: "More things I've built",
+  speak:
+    "I've built a few more things too. My latest is ArchFlow: describe a software idea in plain English, and it designs the architecture, draws the UML diagrams, writes the SQL schema and the full SRS document. Backend Pilot turns a plain-English prompt into a backend, with APIs, folder structure and tests. SERA is edge AI for power-line safety that detects high-impedance faults with an LSTM model, and it won Smart India Hackathon 2025. EduVote is a digital voting system for student elections. And on Saathi, a smart medicine dispenser and health companion, I contributed backend logic and sensor integration.",
+};
+
+export const ACHIEVEMENTS = {
+  label: "Achievements",
+  title: "Wins along the way",
+  results: [
+    { title: "Winner", event: "Smart India Hackathon", place: null, year: "2025", project: "SERA", href: "https://drive.google.com/file/d/1YKdYIWOJF4H6yAqfipCRtujbSSY5QZrv/view?usp=sharing" },
+    { title: "Winner", event: "Apratim Srajan", place: "IIST Indore", year: "2025", project: "SignEcho", href: "https://drive.google.com/file/d/1R9o6EwuZOOrk80raAnE0N3ViaA9hMpTP/view?usp=drive_link" },
+    { title: "Finalist", event: "Hacksagon", place: "ABV-IIITM Gwalior", year: "2025", href: "https://drive.google.com/drive/folders/1haNkRVWD4txV2-kD69WT6gGzA2aleYr1?usp=drive_link" },
+    { title: "Finalist", event: "S&T IISF", place: "IIT Guwahati", year: "2024", href: "https://drive.google.com/file/d/1I2Gldni2k94B1yxdMMZ-XsJxkE3F3mV3/view?usp=sharing" },
+    { title: "Runner-up", event: "Cognizance Watch Tower", place: "IIT Roorkee", year: "2023" },
+  ],
+  speak:
+    "Along the way, I've picked up a few wins. I won Smart India Hackathon 2025 with SERA, and Apratim Srajan 2025 at IIST Indore with SignEcho. I was a finalist at Hacksagon at ABV-IIITM Gwalior, and at S and T IISF at IIT Guwahati. And I was runner-up at Cognizance Watch Tower at IIT Roorkee. The certificates are linked right here.",
+};
+
+// Latest first.
+export const TIMELINE = [
+  { org: "IIT Madras", role: "Undergraduate Research Intern", period: "Jul 2026 – Present", note: "Research with Prof. Rahul H. Meshram, Dept. of EE: MDPs, dynamic programming and Q-Learning. Built a Python grid-world to compare planning and model-free learning.", current: true },
+  { org: "Klover.AI", role: "AI Engineer · Open Source Contributor", period: "Jan 2025 – Apr 2025", note: "Built multi-agent workflows for automated decision-making and fault recovery. Collaborated remotely on modular, reusable agents and deployable AI pipelines." },
+  { org: "Graduating", role: "IIT Madras · BS in Data Science", period: "2027", note: "BS in Data Science from IIT Madras (May 2027), alongside a B.Tech in Computer Science Engineering from IIST Indore (Jun 2027).", future: true },
+];
+
+export const EXPERIENCE = {
+  label: "Experience",
+  title: "Where I've worked",
+  // Three sentences: the timeline slides to the next card on each one.
+  speak:
+    "Right now, I'm a research intern at IIT Madras, working on Markov decision processes, dynamic programming and Q-Learning. Before that, from January to April 2025, I was an AI engineer and open source contributor at Klover AI, building multi-agent workflows for automated decision-making and fault recovery. And in 2027, I graduate with a BS in Data Science from IIT Madras, alongside my B.Tech in Computer Science from IIST Indore.",
+};
+
+export const HOW = {
+  label: "Behind the scenes",
+  title: "How I built this",
+  answer:
+    "I built this site by voice with Wispr Flow and Emergent, then rebuilt it with Claude Code. It's React with Tailwind, Framer Motion for the animations, Lenis for smooth scrolling, and the browser's Web Speech API, which is the voice you're hearing. The background music streams from live internet radio stations.",
+  specs: ["React", "Tailwind", "Framer Motion", "Lenis", "Web Speech API", "Wispr Flow", "Emergent", "Claude Code"],
+};
+
+export const CONTACT = {
+  label: "Contact",
+  title: "Let's build something",
+  email: "ankitp2412@gmail.com",
+  phone: "+91 73890 18024",
+  phoneHref: "+917389018024",
+  github: "https://github.com/Ankitprajapati24",
+  linkedin: "https://www.linkedin.com/in/ankitprajapati04/",
+  resume: "assets/Ankit_Prajapati_Resume.pdf",
+  answer: "From an idea to a working product, that's the part I love. I'm open to research, collaborations, and interesting opportunities.",
+  speak:
+    "From an idea to a working product, that's the part I love. I'm open to research, collaborations and interesting opportunities. Press Let's talk to send me an email. Thanks for stopping by!",
+};
+
+// Background music: live internet radio stations (from the public radio-browser.info directory).
+// To change a track, swap its url for any station's stream link from radio-browser.info (HTTPS only).
+// If a station is offline, the site falls back to music generated in the browser.
+export const MUSIC = {
+  // Calm, smooth background music only: no party or film songs.
+  stations: [
+    { id: "lofi", name: "Lo-fi", station: "Lofi 24/7 · chill beats", url: "https://usa9.fastcast4u.com/proxy/jamz?mp=/1" },
+    { id: "raaga", name: "Raaga", badge: "IN", station: "Aural Melodics · Indian instrumental", url: "https://stream.zeno.fm/7fmywrmrga0uv" },
+    { id: "jazz", name: "Jazz", station: "Coffee Lounge · smooth jazz", url: "https://0nlineradio.radioho.st/lounge-coffee-bar-lounge" },
+  ],
+  // Spotify playlists shown under "Top on Spotify" (label = tab name).
+  // title and image are optional: if left out, they load from Spotify's link preview.
+  spotify: [
+    { url: "https://open.spotify.com/playlist/37i9dQZF1DWWQRwui0ExPn", label: "Lo-fi", title: "lofi beats", image: "https://i.scdn.co/image/ab67706f00000002266beb50b0032b0f140a749e" },
+    { url: "https://open.spotify.com/playlist/37i9dQZF1DX5q67ZpWyRrZ", label: "Indie India", title: "Indie India", image: "https://i.scdn.co/image/ab67706f00000002656f14776fbb39aa2ae900f0" },
+    { url: "https://open.spotify.com/playlist/37i9dQZF1DX0SM0LYsmbMT", label: "Jazz", title: "Jazz Vibes", image: "https://i.scdn.co/image/ab67706f00000002b1275110babf9cdaaea44cef" },
+  ],
+};
+
+// The pet's little speech bubbles.
+export const PET = {
+  name: "Echo",
+  quips: ["Hi! I'm Echo 🐾", "Wheee!", "Catch me!", "Hehe!", "Have you seen SignEcho?", "Psst… press Know about me!", "Scroll more, I'm bored!", "🎵 la la la", "Boop!", "I'm Ankit's buddy!"],
+  tickled: ["Hehe! That tickles!", "Again! Again!", "Meow! 😸", "You found me!", "Boop!"],
+};
+
+// Order "Know about me" reads in. Ids match section ids on the page.
+export const STORY = [
+  { id: "hero", speak: HERO.speak },
+  { id: "about", speak: ABOUT.answer.join(" ") },
+  { id: "stack", speak: STACK.speak },
+  { id: "now", speak: NOW.speak },
+  { id: "proud", speak: PROUD.speak },
+  { id: "projects", speak: BUILT.speak },
+  { id: "achievements", speak: ACHIEVEMENTS.speak },
+  { id: "experience", speak: EXPERIENCE.speak },
+  { id: "how", speak: HOW.answer },
+  { id: "contact", speak: CONTACT.speak },
+];

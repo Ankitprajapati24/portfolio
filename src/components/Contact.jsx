@@ -1,29 +1,40 @@
-import QuestionBlock from "./QuestionBlock";
-import { BUILD_SPECS, CONTACT } from "../data/content";
-import { Download, Github, Linkedin, Mail, Phone, Wrench } from "lucide-react";
+import { ArrowUpRight, Download, Github, Linkedin, Mail, Phone } from "lucide-react";
+import Section from "./Section";
+import { CONTACT } from "../data/content";
 
 export default function Contact() {
-  const linkClass = "inline-flex items-center justify-center gap-3 border-2 border-ink rounded-lg px-5 py-4 font-semibold hover:bg-ink hover:text-white transition-colors min-w-0";
+  const link = "inline-flex items-center gap-3 rounded-xl border-2 border-ink bg-white px-5 py-4 font-semibold hover:bg-ink hover:text-white transition-colors min-w-0";
   return (
-    <QuestionBlock id="contact" title="Get in touch." testid="section-question-reach-me">
-      <div className="max-w-2xl mx-auto flex flex-col gap-8 pb-16">
-        <div>
-          <p data-testid="contact-intro" className="text-lg sm:text-xl leading-relaxed text-slate-700 font-medium max-w-xl mx-auto">From an idea to a working product — that's the part I love. I'm open to research, collaborations, and interesting opportunities.</p>
-          <div className="mt-6 flex flex-wrap justify-center gap-2.5">
-            <span className="inline-flex items-center gap-2 font-mono text-[11px] uppercase text-slate-500 self-center mr-1"><Wrench className="w-3.5 h-3.5" />Built with</span>
-            {BUILD_SPECS.map((s, i) => <span key={s} data-testid={`build-spec-${i}`} className="rounded-full border border-slate-300 px-3.5 py-1.5 font-mono text-xs text-slate-600">{s}</span>)}
-          </div>
-          <a href={CONTACT.resume} download="Ankit_Prajapati_Resume.pdf" data-testid="download-resume-button" className="mt-8 inline-flex items-center gap-3 border-2 border-ink rounded-lg px-6 py-4 font-semibold hover:bg-ink hover:text-white transition-colors"><Download className="w-5 h-5" />Download résumé<span className="font-mono text-xs opacity-60">PDF</span></a>
-        </div>
-        <div className="flex flex-col gap-4 min-w-0">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <a href={CONTACT.github.href} target="_blank" rel="noopener noreferrer" data-testid="contact-github-link" className={linkClass}><Github className="w-5 h-5 shrink-0" />GitHub</a>
-            <a href={CONTACT.linkedin.href} target="_blank" rel="noopener noreferrer" data-testid="contact-linkedin-link" className={linkClass}><Linkedin className="w-5 h-5 shrink-0" />LinkedIn</a>
-            <a href={`mailto:${CONTACT.email}`} data-testid="contact-email-value" className={`${linkClass} sm:col-span-2 font-mono text-sm`}><Mail className="w-5 h-5 text-hot shrink-0" /><span className="break-all">{CONTACT.email}</span></a>
-            <a href={`tel:${CONTACT.phoneHref}`} data-testid="contact-phone-value" className={`${linkClass} sm:col-span-2 font-mono text-sm`}><Phone className="w-5 h-5 text-hot shrink-0" />{CONTACT.phone}</a>
-          </div>
+    <Section id="contact" data={CONTACT} dotted>
+      <div className="pb-8">
+        <p className="max-w-2xl text-2xl sm:text-3xl font-semibold leading-snug">{CONTACT.answer}</p>
+
+        <a
+          href={`mailto:${CONTACT.email}?subject=${encodeURIComponent("Hello Ankit")}`}
+          className="group mt-12 inline-flex items-center gap-4 rounded-full bg-accent text-white font-display font-black text-4xl sm:text-6xl px-10 sm:px-14 py-6 sm:py-8 border-[3px] border-ink shadow-[8px_8px_0_#0A0A0A] hover:translate-x-1 hover:translate-y-1 hover:shadow-[4px_4px_0_#0A0A0A] transition-all"
+        >
+          Let's talk
+          <ArrowUpRight className="w-10 h-10 sm:w-14 sm:h-14 group-hover:rotate-45 transition-transform" />
+        </a>
+
+        <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl">
+          <a href={`mailto:${CONTACT.email}`} className={`${link} sm:col-span-2 lg:col-span-1 font-mono text-sm`}>
+            <Mail className="w-5 h-5 text-accent shrink-0" /><span className="break-all">{CONTACT.email}</span>
+          </a>
+          <a href={`tel:${CONTACT.phoneHref}`} className={`${link} font-mono text-sm`}>
+            <Phone className="w-5 h-5 text-accent shrink-0" />{CONTACT.phone}
+          </a>
+          <a href={CONTACT.resume} download="Ankit_Prajapati_Resume.pdf" className={link}>
+            <Download className="w-5 h-5 text-accent shrink-0" />Résumé (PDF)
+          </a>
+          <a href={CONTACT.github} target="_blank" rel="noopener noreferrer" className={link}>
+            <Github className="w-5 h-5 shrink-0" />GitHub
+          </a>
+          <a href={CONTACT.linkedin} target="_blank" rel="noopener noreferrer" className={link}>
+            <Linkedin className="w-5 h-5 shrink-0" />LinkedIn
+          </a>
         </div>
       </div>
-    </QuestionBlock>
+    </Section>
   );
 }

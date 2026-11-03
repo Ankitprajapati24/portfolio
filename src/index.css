@@ -3,64 +3,26 @@
 @tailwind utilities;
 
 body {
-    margin: 0;
-    font-family: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background: #ffffff;
-    color: #0f172a;
-}
-
-code {
-    font-family: "JetBrains Mono", Menlo, Monaco, Consolas, monospace;
+  margin: 0;
+  font-family: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #ffffff;
+  color: #0a0a0a;
 }
 
 ::selection {
-    background: #ff4f00;
-    color: #ffffff;
+  background: #ff6b00;
+  color: #ffffff;
 }
 
 html.lenis,
 html.lenis body {
-    height: auto;
+  height: auto;
 }
 .lenis.lenis-smooth {
-    scroll-behavior: auto !important;
+  scroll-behavior: auto !important;
 }
 .lenis.lenis-stopped {
-    overflow: hidden;
-}
-
-@layer base {
-    :root {
-        --background: 0 0% 100%;
-        --foreground: 222 47% 11%;
-        --card: 0 0% 100%;
-        --card-foreground: 222 47% 11%;
-        --popover: 0 0% 100%;
-        --popover-foreground: 222 47% 11%;
-        --primary: 222 47% 11%;
-        --primary-foreground: 0 0% 98%;
-        --secondary: 210 40% 96.1%;
-        --secondary-foreground: 222 47% 11%;
-        --muted: 210 40% 96.1%;
-        --muted-foreground: 215 16% 47%;
-        --accent: 21 100% 50%;
-        --accent-foreground: 0 0% 100%;
-        --destructive: 0 84.2% 60.2%;
-        --destructive-foreground: 0 0% 98%;
-        --border: 214 32% 91%;
-        --input: 214 32% 91%;
-        --ring: 21 100% 50%;
-        --radius: 0.5rem;
-    }
-}
-
-@layer base {
-    * {
-        @apply border-border;
-    }
-    body {
-        @apply bg-background text-foreground;
-    }
+  overflow: hidden;
 }
