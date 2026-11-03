@@ -92,7 +92,7 @@ function ProjectSheet({ project, onClose }) {
   const p = project;
   const github = p.href?.includes("github.com");
   const action = p.href
-    ? { href: p.href, label: github ? "View source" : "Visit", Icon: github ? Github : ArrowUpRight, external: true }
+    ? { href: p.href, label: github ? "View source" : p.linkLabel === "Live demo" ? "Live demo" : "Visit", Icon: github ? Github : ArrowUpRight, external: true }
     : { href: `mailto:${CONTACT.email}?subject=${encodeURIComponent(`About ${p.title}`)}`, label: "Ask me about it", Icon: Mail };
 
   return (
@@ -153,14 +153,27 @@ function ProjectSheet({ project, onClose }) {
             ))}
           </div>
 
-          <a
-            href={action.href}
-            {...(action.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-            className="mt-6 flex items-center justify-center gap-2 w-full rounded-xl bg-ink text-white font-semibold py-3.5 hover:bg-accent transition-colors"
-          >
-            <action.Icon className="w-4 h-4" />
-            {action.label}
-          </a>
+          <div className="mt-6 flex gap-3">
+            <a
+              href={action.href}
+              {...(action.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+              className="flex-1 flex items-center justify-center gap-2 rounded-xl bg-ink text-white font-semibold py-3.5 hover:bg-accent transition-colors"
+            >
+              <action.Icon className="w-4 h-4" />
+              {action.label}
+            </a>
+            {p.source && (
+              <a
+                href={p.source}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 rounded-xl border-2 border-ink font-semibold px-5 py-3.5 hover:bg-slate-100 transition-colors"
+              >
+                <Github className="w-4 h-4" />
+                Source
+              </a>
+            )}
+          </div>
         </div>
       </motion.div>
     </motion.div>

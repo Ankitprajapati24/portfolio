@@ -1,6 +1,6 @@
 // Background music: plays a live radio station. If the station can't be reached,
 // it falls back to a lo-fi loop generated in the browser with the Web Audio API.
-// Browsers only allow sound after a click or key press, so it starts on the first one.
+// Music only starts when the visitor presses play.
 import { useSyncExternalStore } from "react";
 import { MUSIC } from "../data/content";
 
@@ -216,20 +216,4 @@ export function duckMusic(value) {
   if (!state.on) return;
   if (state.fallback && ctx) master.gain.setTargetAtTime(level(), ctx.currentTime, 0.2);
   else fadeTo(level());
-}
-
-/** Start the music on the visitor's first click or key press, unless they turned it off before. */
-export function startMusicOnFirstGesture() {
-  let pref = "on";
-  try { pref = localStorage.getItem("music") || "on"; } catch {}
-  if (pref === "off") return () => {};
-  const go = (e) => {
-    remove();
-    // Music controls handle their own first click.
-    if (e.target?.closest?.("[data-music-toggle]")) return;
-    startMusic();
-  };
-  const remove = () => ["pointerdown", "keydown"].forEach((e) => window.removeEventListener(e, go));
-  ["pointerdown", "keydown"].forEach((e) => window.addEventListener(e, go));
-  return remove;
 }

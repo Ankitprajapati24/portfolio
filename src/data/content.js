@@ -64,12 +64,12 @@ export const NOW = {
 };
 
 export const PROJECTS = [
-  { id: "signecho", title: "SignEcho", app: { icon: "hand", tone: "sun", line: "Sign language → speech" }, desc: "Real-time sign language to speech and text. A CNN + MediaPipe pipeline achieved 79.6% accuracy in a user-tested web app.", tags: ["OpenCV", "PyTorch", "MediaPipe"], award: "Apratim Srajan 2025 · Winner", href: "https://github.com/Ankitprajapati24/SignEcho", linkLabel: "View source" },
+  { id: "signecho", title: "SignEcho", app: { icon: "hand", tone: "sun", line: "Sign language → speech" }, desc: "Real-time sign language to speech and text, powered by a CNN + MediaPipe pipeline and tested with real users in a web app.", tags: ["OpenCV", "PyTorch", "MediaPipe"], award: "Apratim Srajan 2025 · Winner", href: "https://friendly-beignet-24aabc.netlify.app/", linkLabel: "Live demo", source: "https://github.com/Ankitprajapati24/SignEcho", images: ["assets/projects/signecho-cover.jpg"] },
   { id: "archflow", title: "ArchFlow", latest: true, desc: "Describe a software idea in plain English and get structured architecture designs, UML diagrams (ERD, class, sequence, activity, DFD), SQL schemas and a complete SRS document, ready to export as PDF, DOCX, PNG or SQL.", tags: ["AI", "System design", "UML", "Mermaid.js", "SQL"], href: "https://arcflow.codebread.fun", linkLabel: "Visit project", images: ["assets/projects/archflow.jpg", "assets/projects/archflow-2.jpg"], app: { icon: "workflow", tone: "ink" } },
-  { id: "backend-pilot", title: "Backend Pilot", desc: "A natural-language prompt becomes a backend: APIs, folder structure, and tests. Built with LLM-powered generation and structured prompt pipelines.", tags: ["LLMs", "Groq API", "Code generation"], href: "https://backendpilot.onrender.com/", linkLabel: "Visit project", images: ["assets/projects/backend-pilot.jpg"], app: { icon: "server", tone: "accent" } },
-  { id: "sera", title: "SERA", desc: "Edge AI for power-line safety. Detects high-impedance faults using an LSTM model, with automatic phase isolation and remote monitoring.", tags: ["IoT", "Edge AI", "LSTM"], award: "SIH 2025 · Winner", href: "https://github.com/Ankitprajapati24/sera_dashboard_main.git", linkLabel: "View source", app: { icon: "zap", tone: "ink", line: "Edge AI · Power-line safety" } },
-  { id: "eduvote", title: "EduVote", desc: "A digital voting system for student elections, with secure sign-in, role-based access, and real-time election analytics.", tags: ["React", "Node.js", "MongoDB", "Firebase Auth"], href: null, app: { icon: "vote", tone: "sun", line: "Student elections, online" } },
-  { id: "saathi", title: "Saathi", desc: "A smart medicine dispenser and health companion: reminders, heartbeat and fall detection, and caregiver alerts. I contributed backend logic and sensor integration.", tags: ["ESP32", "TensorFlow", "Flutter", "Firebase"], href: "https://saathi.flutterflow.app/", linkLabel: "Visit project", app: { icon: "heart-pulse", tone: "accent", line: "Health companion · IoT" } },
+  { id: "backend-pilot", title: "Backend Pilot", desc: "A natural-language prompt becomes a backend: APIs, folder structure, and tests. Built with LLM-powered generation and structured prompt pipelines.", tags: ["LLMs", "Groq API", "Code generation"], href: "https://backendpilot.onrender.com/", linkLabel: "Visit project", images: ["assets/projects/backend-pilot.jpg", "assets/projects/backend-pilot-cover.jpg"], app: { icon: "server", tone: "accent" } },
+  { id: "sera", title: "SERA", desc: "Edge AI for power-line safety. Detects high-impedance faults using an LSTM model, with automatic phase isolation and remote monitoring.", tags: ["IoT", "Edge AI", "LSTM"], award: "SIH 2025 · Winner", href: "https://github.com/Ankitprajapati24/sera_dashboard_main.git", linkLabel: "View source", images: ["assets/projects/sera-cover.jpg"], app: { icon: "zap", tone: "ink", line: "Edge AI · Power-line safety" } },
+  { id: "eduvote", title: "EduVote", desc: "A digital voting system for student elections, with secure sign-in, role-based access, and real-time election analytics.", tags: ["React", "Node.js", "MongoDB", "Firebase Auth"], href: "https://ewsc-chi.vercel.app/", linkLabel: "Live demo", images: ["assets/projects/election-cover.jpg"], app: { icon: "vote", tone: "sun", line: "Student elections, online" } },
+  { id: "saathi", title: "Saathi", desc: "A smart medicine dispenser and health companion: reminders, heartbeat and fall detection, and caregiver alerts. I contributed backend logic and sensor integration.", tags: ["ESP32", "TensorFlow", "Flutter", "Firebase"], href: "https://saathi.flutterflow.app/", linkLabel: "Visit project", images: ["assets/projects/saathi-cover.jpg"], app: { icon: "heart-pulse", tone: "accent", line: "Health companion · IoT" } },
 ];
 export const FEATURED = PROJECTS[0];
 export const OTHER_PROJECTS = PROJECTS.slice(1);
@@ -77,10 +77,10 @@ export const OTHER_PROJECTS = PROJECTS.slice(1);
 export const PROUD = {
   label: "Featured",
   title: "The one I'm proudest of",
-  stat: { value: "79.6%", label: "accuracy in a user-tested web app" },
+  image: "assets/projects/signecho-cover.jpg",
   pipeline: ["Sign", "MediaPipe", "CNN", "Speech + text"],
   speak:
-    "The project I'm proudest of is SignEcho. It translates sign language into speech and text in real time. A CNN and MediaPipe pipeline reached 79.6 percent accuracy in a user-tested web app, and it won Apratim Srajan 2025 at IIST Indore.",
+    "The project I'm proudest of is SignEcho. It translates sign language into speech and text in real time. It runs on a CNN and MediaPipe pipeline, I tested it with real users, and it won Apratim Srajan 2025 at IIST Indore.",
 };
 
 export const BUILT = {

@@ -3,7 +3,6 @@ import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { Volume2, Pause, Play } from "lucide-react";
 import { HERO, SURNAME_SCRIPTS } from "../data/content";
 import { pauseStory, resumeStory, startStory, useStory } from "../lib/story";
-import { startMusic } from "../lib/music";
 import TopBar from "./TopBar";
 import SkillWave from "./SkillWave";
 
@@ -55,7 +54,7 @@ export default function Hero() {
       ? { label: "Pause", Icon: Pause, onClick: pauseStory }
       : status === "paused"
         ? { label: "Resume", Icon: Play, onClick: resumeStory }
-        : { label: "Know about me", Icon: Volume2, onClick: () => { startMusic(); startStory(0); } };
+        : { label: "Know about me", Icon: Volume2, onClick: () => startStory(0) };
 
   // 3D tilt: the name leans towards the mouse, like a card in your hand.
   const onMove = (e) => {

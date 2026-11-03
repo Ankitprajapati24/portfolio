@@ -3,7 +3,6 @@ import Lenis from "lenis";
 import "./App.css";
 import { registerLenis } from "./lib/ui";
 import { stopStory } from "./lib/story";
-import { startMusicOnFirstGesture } from "./lib/music";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import TechStack from "./components/TechStack";
@@ -30,7 +29,6 @@ export default function App() {
     };
     raf = requestAnimationFrame(loop);
     // Stop talking if the visitor leaves the tab.
-    const removeMusicStarter = startMusicOnFirstGesture();
     const onHide = () => { if (document.hidden) stopStory(); };
     document.addEventListener("visibilitychange", onHide);
     return () => {
@@ -38,7 +36,6 @@ export default function App() {
       lenis.destroy();
       registerLenis(null);
       document.removeEventListener("visibilitychange", onHide);
-      removeMusicStarter();
       stopStory();
     };
   }, []);
