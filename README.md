@@ -2,7 +2,7 @@
 
 Ankit Prajapati — Portfolio. Live at https://portfolio.codebread.fun
 
-A one-page scrolling portfolio. "Know about me" reads each section aloud in first person (browser voice) and scrolls along with captions. Echo the pixel cat roams the page, and soft background music is generated live with Web Audio.
+A one-page scrolling portfolio. "Know about me" scrolls through each section while my recorded voice (Sarvam AI) tells the story, with captions. Echo the pixel cat roams the page, a project store shows screenshots and live demos, and the music popup plays calm live radio or Spotify playlists.
 
 ## Run locally
 ```
