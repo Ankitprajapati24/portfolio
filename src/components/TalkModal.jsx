@@ -91,7 +91,13 @@ function Panel() {
     if (!valid || status === "sending") return;
     setStatus("sending");
     try {
-      await sendMessage({ ...form, name: form.name.trim(), email: form.email.trim(), message: form.message.trim() });
+      await sendMessage({
+        name: form.name.trim(),
+        email: form.email.trim(),
+        reason: form.reason,
+        message: form.message.trim(),
+        honeypot: form["bot-field"],
+      });
       setStatus("sent");
       window.dispatchEvent(new Event("talk:sent"));
     } catch {
@@ -139,7 +145,7 @@ function Panel() {
               </div>
 
               <form name="contact" onSubmit={submit} noValidate className="space-y-4">
-                {/* Hidden from people; bots that fill it are dropped by Netlify. */}
+                {/* Hidden from people; bots that fill it get dropped. */}
                 <p className="hidden"><label>Leave this empty <input name="bot-field" value={form["bot-field"]} onChange={set("bot-field")} tabIndex={-1} autoComplete="off" /></label></p>
 
                 <div className="grid sm:grid-cols-2 gap-4">
