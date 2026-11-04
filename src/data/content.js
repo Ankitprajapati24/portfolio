@@ -136,6 +136,8 @@ export const CONTACT = {
   github: "https://github.com/Ankitprajapati24",
   linkedin: "https://www.linkedin.com/in/ankitprajapati04/",
   resume: "assets/Ankit_Prajapati_Resume.pdf",
+  // Web3Forms access key for the "Let's talk" form (free at web3forms.com, made for public sites).
+  web3formsKey: "70c679d7-19ee-40e4-814d-e1030a26d649",
   answer: "From an idea to a working product, that's the part I love. I'm open to research, collaborations, and interesting opportunities.",
   speak:
     "From an idea to a working product, that's the part I love. I'm open to research, collaborations and interesting opportunities. Press Let's talk to send me a message. Thanks for stopping by!",
