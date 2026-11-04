@@ -3,6 +3,7 @@ import { House, FolderGit2, Briefcase, Trophy, Mic, MessageCircle, Pause, Play, 
 import { scrollToSection } from "../lib/ui";
 import { pauseStory, resumeStory, stopStory, useStory } from "../lib/story";
 import { toggleMusic, useMusic } from "../lib/music";
+import { closeAsk, openAsk, useAsk } from "../lib/ask";
 
 const NAV = [
   { id: "hero", label: "Home", icon: House },
@@ -45,6 +46,7 @@ function Captions() {
 
 export default function Dock() {
   const { on: musicOn } = useMusic();
+  const { open: askOpen } = useAsk();
   const go = (id) => { stopStory(); scrollToSection(id); };
   return (
     <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-40 flex flex-col items-center">
@@ -56,7 +58,7 @@ export default function Dock() {
             onClick={() => go(it.id)}
             title={it.label}
             aria-label={it.label}
-            className="flex items-center gap-2 rounded-full px-3 lg:px-4 py-2.5 text-slate-300 hover:text-white hover:bg-white/10 transition-colors"
+            className="flex items-center gap-2 rounded-full px-2.5 sm:px-3 lg:px-4 py-2.5 text-slate-300 hover:text-white hover:bg-white/10 transition-colors"
           >
             <it.icon className="w-[18px] h-[18px]" />
             <span className="hidden lg:inline text-sm font-medium">{it.label}</span>
@@ -70,29 +72,31 @@ export default function Dock() {
           title={musicOn ? "Turn music off" : "Turn music on"}
           aria-label={musicOn ? "Turn music off" : "Turn music on"}
           aria-pressed={musicOn}
-          className={`flex items-center rounded-full px-3 py-2.5 hover:bg-white/10 transition-colors ${musicOn ? "text-sun" : "text-slate-500"}`}
+          className={`flex items-center rounded-full px-2.5 sm:px-3 py-2.5 hover:bg-white/10 transition-colors ${musicOn ? "text-sun" : "text-slate-500"}`}
         >
           {musicOn ? <Music className="w-[18px] h-[18px]" /> : <VolumeX className="w-[18px] h-[18px]" />}
         </button>
 
-        {/* Placeholder: voice questions are not built yet. */}
         <button
           type="button"
-          title="Voice questions — coming soon"
-          aria-label="Microphone (coming soon)"
-          className="flex items-center rounded-full px-3 py-2.5 text-accent hover:bg-white/10 transition-colors"
+          onClick={askOpen ? closeAsk : openAsk}
+          title="Ask me anything"
+          aria-label="Ask me anything"
+          aria-expanded={askOpen}
+          className={`flex items-center gap-2 rounded-full px-2.5 sm:px-3 py-2.5 transition-colors ${askOpen ? "bg-accent text-white" : "text-accent hover:bg-white/10"}`}
         >
           <Mic className="w-[18px] h-[18px]" />
         </button>
 
-        <span className="w-px h-6 bg-white/15 mx-1" aria-hidden />
+        <span className="hidden sm:block w-px h-6 bg-white/15 mx-1" aria-hidden />
 
         <button
           onClick={() => go("contact")}
-          className="flex items-center gap-2 rounded-full bg-accent hover:bg-accentdark text-white text-sm font-semibold px-4 py-2.5 transition-colors whitespace-nowrap"
+          aria-label="Let's talk"
+          className="flex items-center gap-2 rounded-full bg-accent hover:bg-accentdark text-white text-sm font-semibold px-3 sm:px-4 py-2.5 transition-colors whitespace-nowrap"
         >
           <MessageCircle className="w-4 h-4" />
-          Let's talk
+          <span className="hidden sm:inline">Let's talk</span>
         </button>
       </nav>
     </div>

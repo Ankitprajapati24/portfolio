@@ -1,4 +1,4 @@
-// Generates the "Know about me" narration with Sarvam AI text-to-speech.
+// Generates the "Know about me" narration and "Ask me anything" answers with Sarvam AI text-to-speech.
 // Run:  npm run voice            (all lines)
 //       npm run voice -- --limit 2   (just the first 2 lines, to hear the voice)
 //
@@ -10,7 +10,7 @@
 import { existsSync, mkdirSync, readFileSync, readdirSync, unlinkSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { STORY } from "../src/data/content.js";
+import { ASK, STORY } from "../src/data/content.js";
 import { lineId, sentences } from "../src/lib/sentences.js";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -42,7 +42,9 @@ const old = existsSync(manifestPath) ? JSON.parse(readFileSync(manifestPath, "ut
 const sameVoice = old.speaker === speaker && old.model === model && old.pace === pace;
 const lines = sameVoice ? { ...old.lines } : {};
 
-const all = STORY.flatMap((s) => sentences(s.speak)).slice(0, limit);
+// The "Know about me" story plus every "Ask me anything" answer, without duplicates.
+const texts = [...STORY.map((s) => s.speak), ...ASK.topics.map((t) => t.answer), ASK.fallback];
+const all = [...new Set(texts.flatMap((t) => sentences(t)))].slice(0, limit);
 const wanted = new Set(all.map(lineId));
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 

@@ -180,3 +180,45 @@ export const STORY = [
   { id: "how", speak: HOW.answer },
   { id: "contact", speak: CONTACT.speak },
 ];
+
+// "Ask me anything": visitors ask by voice or text; the best-matching answer is spoken
+// in the same recorded voice. Answers use only facts from this page.
+// keys: words that point to a topic (more matches = better). section: where to scroll.
+export const ASK = {
+  suggestions: ["Who are you?", "What are you working on?", "Tell me about SignEcho", "What is ArchFlow?", "What have you won?", "How can I contact you?"],
+  topics: [
+    { id: "hello", keys: ["hello", "hi", "hey", "namaste", "good morning", "good evening"], section: null,
+      answer: "Hey, nice to meet you! Ask me about my projects, my research, my tech stack or my hackathon wins." },
+    { id: "about", keys: ["who are you", "about you", "yourself", "introduce", "who is ankit", "tell me about you", "background"], section: "about",
+      answer: "I'm Ankit Prajapati. I build across AI, connected devices and full-stack software. I'm pursuing a BS in Data Science at IIT Madras and a B.Tech in Computer Science at IIST Indore." },
+    { id: "now", keys: ["working on", "right now", "currently", "research", "intern", "internship", "iit madras", "q-learning", "reinforcement", "mdp", "markov"], section: "now",
+      answer: "Right now I'm an undergraduate research intern at IIT Madras, working with Professor Rahul H. Meshram. I'm studying Markov decision processes, dynamic programming and Q-Learning, and I built a Python grid-world to compare planning with model-free learning." },
+    { id: "stack", keys: ["stack", "skills", "tech", "language", "languages", "framework", "tools", "python", "react", "pytorch", "know"], section: "stack",
+      answer: "My main languages are Python, C and C plus plus, Java, JavaScript and SQL. I build with Flask, Django, FastAPI, React and Node.js, and for machine learning I use PyTorch, TensorFlow, OpenCV and LangChain." },
+    { id: "signecho", keys: ["signecho", "sign echo", "sign language", "sign", "deaf", "mediapipe", "proud"], section: "proud",
+      answer: "SignEcho translates sign language into speech and text in real time. It runs on a CNN and MediaPipe pipeline, I tested it with real users, and it won Apratim Srajan 2025 at IIST Indore." },
+    { id: "archflow", keys: ["archflow", "arch flow", "arc flow", "arcflow", "latest", "system design", "uml", "srs"], section: "projects",
+      answer: "ArchFlow is my latest project. You describe a software idea in plain English, and it designs the architecture, draws the UML diagrams, writes the SQL schema and a full SRS document." },
+    { id: "backend-pilot", keys: ["backend pilot", "pilot", "generate backend", "code generation", "prompt to backend"], section: "projects",
+      answer: "Backend Pilot turns a plain-English prompt into a backend, with APIs, folder structure and tests, using LLM-powered generation." },
+    { id: "sera", keys: ["sera", "power line", "power-line", "fault", "smart india", "sih", "lstm", "edge ai"], section: "projects",
+      answer: "SERA is edge AI for power-line safety. It detects high-impedance faults with an LSTM model, isolates the phase automatically and supports remote monitoring. It won Smart India Hackathon 2025." },
+    { id: "eduvote", keys: ["eduvote", "edu vote", "voting", "vote", "election"], section: "projects",
+      answer: "EduVote is a digital voting system for student elections, with secure sign-in, role-based access and real-time election analytics." },
+    { id: "saathi", keys: ["saathi", "sathi", "medicine", "health", "dispenser", "fall detection"], section: "projects",
+      answer: "Saathi is a smart medicine dispenser and health companion, with reminders, heartbeat and fall detection, and caregiver alerts. I contributed the backend logic and sensor integration." },
+    { id: "projects", keys: ["projects", "built", "build", "portfolio of work", "what have you made", "apps"], section: "projects",
+      answer: "My favourite is SignEcho, a sign language translator. I've also built ArchFlow, Backend Pilot, SERA, EduVote and Saathi. Tap any project card to see screenshots and live demos." },
+    { id: "wins", keys: ["won", "win", "wins", "award", "awards", "hackathon", "hackathons", "achievement", "achievements", "finalist", "prize"], section: "achievements",
+      answer: "I won Smart India Hackathon 2025 with SERA and Apratim Srajan 2025 with SignEcho. I was a finalist at Hacksagon at ABV-IIITM Gwalior and at S and T IISF at IIT Guwahati, and runner-up at Cognizance at IIT Roorkee." },
+    { id: "experience", keys: ["experience", "work", "worked", "job", "klover", "company", "companies"], section: "experience",
+      answer: "I'm currently a research intern at IIT Madras. Before that, from January to April 2025, I was an AI engineer and open source contributor at Klover AI, building multi-agent workflows for decision-making and fault recovery." },
+    { id: "education", keys: ["education", "study", "studying", "college", "degree", "university", "graduate", "graduation", "iist", "student"], section: "experience",
+      answer: "I'm doing a BS in Data Science at IIT Madras and a B.Tech in Computer Science at IIST Indore. I graduate in 2027." },
+    { id: "contact", keys: ["contact", "email", "reach", "hire", "phone", "linkedin", "github", "talk", "connect", "resume"], section: "contact",
+      answer: "The easiest way is email, at ankitp2412 at gmail dot com. You can also find me on LinkedIn and GitHub, and download my résumé, right here in the contact section." },
+    { id: "how", keys: ["how did you build", "how was this built", "this site", "this website", "voice", "sarvam", "wispr", "made this"], section: "how",
+      answer: "I built this site by voice with Wispr Flow and Emergent, then rebuilt it with Claude Code. The voice you're hearing is recorded with Sarvam AI." },
+  ],
+  fallback: "Good question, but I don't have an answer for that one here. Email me at ankitp2412 at gmail dot com and I'll reply personally.",
+};
