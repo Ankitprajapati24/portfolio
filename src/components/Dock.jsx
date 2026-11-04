@@ -86,6 +86,7 @@ export default function Dock() {
           className={`flex items-center gap-2 rounded-full px-2.5 sm:px-3 py-2.5 transition-colors ${askOpen ? "bg-accent text-white" : "text-accent hover:bg-white/10"}`}
         >
           <Mic className="w-[18px] h-[18px]" />
+          <span className="hidden lg:inline text-sm font-medium whitespace-nowrap">Ask me</span>
         </button>
 
         <span className="hidden sm:block w-px h-6 bg-white/15 mx-1" aria-hidden />

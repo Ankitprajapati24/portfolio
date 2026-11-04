@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
-import { Volume2, Pause, Play } from "lucide-react";
+import { Mic, Volume2, Pause, Play } from "lucide-react";
 import { HERO, SURNAME_SCRIPTS } from "../data/content";
 import { pauseStory, resumeStory, startStory, useStory } from "../lib/story";
+import { openAsk } from "../lib/ask";
 import TopBar from "./TopBar";
 import SkillWave from "./SkillWave";
 
@@ -114,14 +115,23 @@ export default function Hero() {
 
         <p className="font-mono text-xs sm:text-sm text-slate-500 mt-8">{HERO.tagline}</p>
 
-        <button
-          onClick={button.onClick}
-          className="mt-10 inline-flex items-center gap-3 rounded-full bg-ink text-white font-semibold text-lg px-8 py-4 shadow-[5px_5px_0_#FFC400] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[3px_3px_0_#FFC400] transition-all"
-        >
-          <button.Icon className="w-5 h-5" />
-          {button.label}
-        </button>
-        <p className="mt-4 text-xs text-slate-500">Sound on: I'll walk you through it. Or just scroll.</p>
+        <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+          <button
+            onClick={button.onClick}
+            className="inline-flex items-center gap-3 rounded-full bg-ink text-white font-semibold text-lg px-8 py-4 shadow-[5px_5px_0_#FFC400] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[3px_3px_0_#FFC400] transition-all"
+          >
+            <button.Icon className="w-5 h-5" />
+            {button.label}
+          </button>
+          <button
+            onClick={openAsk}
+            className="inline-flex items-center gap-3 rounded-full border-[3px] border-ink bg-sun text-ink font-semibold text-lg px-7 py-[13px] shadow-[5px_5px_0_#0A0A0A] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[3px_3px_0_#0A0A0A] transition-all"
+          >
+            <Mic className="w-5 h-5" />
+            Ask me anything
+          </button>
+        </div>
+        <p className="mt-4 text-xs text-slate-500">Sound on: listen to my story, or ask me a question out loud.</p>
       </motion.div>
     </section>
   );
