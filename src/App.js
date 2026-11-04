@@ -12,6 +12,7 @@ import Projects from "./components/Projects";
 import Achievements from "./components/Achievements";
 import Experience from "./components/Experience";
 import HowBuilt from "./components/HowBuilt";
+import Play from "./components/Play";
 import Contact from "./components/Contact";
 import Dock from "./components/Dock";
 import Pet from "./components/Pet";
@@ -53,6 +54,7 @@ export default function App() {
       <Achievements />
       <Experience />
       <HowBuilt />
+      <Play />
       <Contact />
       <Footer />
       <Dock />

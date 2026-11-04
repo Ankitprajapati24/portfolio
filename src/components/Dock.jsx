@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { House, FolderGit2, Briefcase, Trophy, Mic, MessageCircle, Pause, Play, X, Music, VolumeX } from "lucide-react";
+import { House, FolderGit2, Briefcase, Trophy, Gamepad2, Mic, MessageCircle, Pause, Play, X, Music, VolumeX } from "lucide-react";
 import { scrollToSection } from "../lib/ui";
 import { pauseStory, resumeStory, stopStory, useStory } from "../lib/story";
 import { toggleMusic, useMusic } from "../lib/music";
@@ -11,6 +11,7 @@ const NAV = [
   { id: "projects", label: "Projects", icon: FolderGit2 },
   { id: "experience", label: "Experience", icon: Briefcase },
   { id: "achievements", label: "Achievements", icon: Trophy },
+  { id: "play", label: "Play", icon: Gamepad2 },
 ];
 
 /** Shows what is being said during "Know about me", with pause and stop. */

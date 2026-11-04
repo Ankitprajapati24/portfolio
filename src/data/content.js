@@ -127,6 +127,19 @@ export const HOW = {
   specs: ["React", "Tailwind", "Framer Motion", "Lenis", "Web Speech API", "Wispr Flow", "Emergent", "Claude Code"],
 };
 
+export const PLAY = {
+  label: "Play",
+  title: "Take a quick break",
+  intro: "Built a few tiny games for you. Your best scores stay saved in this browser, and Echo cheers when you beat them.",
+  speak:
+    "Before you go, take a quick break. Squash some bugs before the deploy, match the cards from my tech stack, or guess which Indian script my surname is written in.",
+  games: [
+    { id: "bugs", name: "Bug Squash", blurb: "Squash bugs before the deploy. Don't touch my coffee." },
+    { id: "match", name: "Stack Match", blurb: "Flip the cards and pair up my tech stack." },
+    { id: "scripts", name: "Name in Scripts", blurb: "My surname in six Indian scripts. Can you tell them apart?" },
+  ],
+};
+
 export const CONTACT = {
   label: "Contact",
   title: "Let's build something",
@@ -180,6 +193,7 @@ export const STORY = [
   { id: "achievements", speak: ACHIEVEMENTS.speak },
   { id: "experience", speak: EXPERIENCE.speak },
   { id: "how", speak: HOW.answer },
+  { id: "play", speak: PLAY.speak },
   { id: "contact", speak: CONTACT.speak },
 ];
 
@@ -219,6 +233,8 @@ export const ASK = {
       answer: "I'm doing a BS in Data Science at IIT Madras and a B.Tech in Computer Science at IIST Indore. I graduate in 2027." },
     { id: "contact", keys: ["contact", "email", "reach", "hire", "phone", "linkedin", "github", "talk", "connect", "resume"], section: "contact",
       answer: "The easiest way is email, at ankitp2412 at gmail dot com. Or press Let's talk to send me a message right from this page." },
+    { id: "play", keys: ["game", "games", "play", "fun", "bored", "bug squash", "memory game", "quiz"], section: "play",
+      answer: "There are three small games on this page. Squash bugs before the deploy, match the cards from my tech stack, or guess which Indian script my surname is written in. Have fun!" },
     { id: "how", keys: ["how did you build", "how was this built", "this site", "this website", "voice", "sarvam", "wispr", "made this"], section: "how",
       answer: "I built this site by voice with Wispr Flow and Emergent, then rebuilt it with Claude Code. The voice you're hearing is recorded with Sarvam AI." },
   ],

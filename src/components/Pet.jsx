@@ -195,8 +195,14 @@ export default function Pet() {
   tickleRef.current = tickle;
   useEffect(() => {
     const cheer = () => setTimeout(() => tickleRef.current("Yay, message sent! 🎉"), 400);
+    // Games ask Echo to celebrate a new best score.
+    const gameCheer = (e) => tickleRef.current(e.detail);
     window.addEventListener("talk:sent", cheer);
-    return () => window.removeEventListener("talk:sent", cheer);
+    window.addEventListener("pet:cheer", gameCheer);
+    return () => {
+      window.removeEventListener("talk:sent", cheer);
+      window.removeEventListener("pet:cheer", gameCheer);
+    };
   }, []);
 
   const { w, h } = typeof window !== "undefined" ? petSize() : { w: 68, h: 81 };
