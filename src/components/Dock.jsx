@@ -4,6 +4,7 @@ import { scrollToSection } from "../lib/ui";
 import { pauseStory, resumeStory, stopStory, useStory } from "../lib/story";
 import { toggleMusic, useMusic } from "../lib/music";
 import { closeAsk, openAsk, useAsk } from "../lib/ask";
+import { openTalk } from "../lib/talk";
 
 const NAV = [
   { id: "hero", label: "Home", icon: House },
@@ -92,7 +93,7 @@ export default function Dock() {
         <span className="hidden sm:block w-px h-6 bg-white/15 mx-1" aria-hidden />
 
         <button
-          onClick={() => go("contact")}
+          onClick={() => { stopStory(); closeAsk(); openTalk(); }}
           aria-label="Let's talk"
           className="flex items-center gap-2 rounded-full bg-accent hover:bg-accentdark text-white text-sm font-semibold px-3 sm:px-4 py-2.5 transition-colors whitespace-nowrap"
         >

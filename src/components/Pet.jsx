@@ -181,14 +181,23 @@ export default function Pet() {
     return () => cancelAnimationFrame(raf);
   }, [reduced]);
 
-  const tickle = () => {
-    say(pick(PET.tickled), 1800);
+  const tickle = (line = pick(PET.tickled)) => {
+    say(line, 1800);
     const s = st.current;
     if (!reduced) { s.mood = "hop"; s.start = performance.now(); s.until = s.start + 1500; setSleeping(false); }
     const burst = Array.from({ length: 5 }, (_, i) => ({ id: `${Date.now()}-${i}`, dx: rand(-30, 30), delay: i * 70 }));
     setHearts((h) => [...h, ...burst]);
     setTimeout(() => setHearts((h) => h.filter((x) => !burst.includes(x))), 1400);
   };
+
+  // Celebrate when a visitor sends a message from "Let's talk".
+  const tickleRef = useRef(tickle);
+  tickleRef.current = tickle;
+  useEffect(() => {
+    const cheer = () => setTimeout(() => tickleRef.current("Yay, message sent! 🎉"), 400);
+    window.addEventListener("talk:sent", cheer);
+    return () => window.removeEventListener("talk:sent", cheer);
+  }, []);
 
   const { w, h } = typeof window !== "undefined" ? petSize() : { w: 68, h: 81 };
   const bubblePos = { left: "left-0", right: "right-0", center: "left-1/2 -translate-x-1/2" };
@@ -206,7 +215,7 @@ export default function Pet() {
           🧡
         </span>
       ))}
-      <button onClick={tickle} aria-label={`${PET.name} the cat. Click to play.`} className="block w-full h-full cursor-pointer">
+      <button onClick={() => tickle()} aria-label={`${PET.name} the cat. Click to play.`} className="block w-full h-full cursor-pointer">
         <img ref={bodyRef} src="assets/pet-cat.png" alt="" draggable="false" className="w-full h-full object-contain drop-shadow-md select-none" style={{ imageRendering: "pixelated" }} />
       </button>
     </div>

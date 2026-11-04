@@ -18,6 +18,7 @@ import Pet from "./components/Pet";
 import Footer from "./components/Footer";
 import ClickSpark from "./components/ClickSpark";
 import AskMe from "./components/AskMe";
+import TalkModal from "./components/TalkModal";
 
 export default function App() {
   useEffect(() => {
@@ -56,6 +57,7 @@ export default function App() {
       <Footer />
       <Dock />
       <AskMe />
+      <TalkModal />
       <Pet />
       <ClickSpark />
     </main>

@@ -138,7 +138,7 @@ export const CONTACT = {
   resume: "assets/Ankit_Prajapati_Resume.pdf",
   answer: "From an idea to a working product, that's the part I love. I'm open to research, collaborations, and interesting opportunities.",
   speak:
-    "From an idea to a working product, that's the part I love. I'm open to research, collaborations and interesting opportunities. Press Let's talk to send me an email. Thanks for stopping by!",
+    "From an idea to a working product, that's the part I love. I'm open to research, collaborations and interesting opportunities. Press Let's talk to send me a message. Thanks for stopping by!",
 };
 
 // Background music: live internet radio stations (from the public radio-browser.info directory).
@@ -216,7 +216,7 @@ export const ASK = {
     { id: "education", keys: ["education", "study", "studying", "college", "degree", "university", "graduate", "graduation", "iist", "student"], section: "experience",
       answer: "I'm doing a BS in Data Science at IIT Madras and a B.Tech in Computer Science at IIST Indore. I graduate in 2027." },
     { id: "contact", keys: ["contact", "email", "reach", "hire", "phone", "linkedin", "github", "talk", "connect", "resume"], section: "contact",
-      answer: "The easiest way is email, at ankitp2412 at gmail dot com. You can also find me on LinkedIn and GitHub, and download my résumé, right here in the contact section." },
+      answer: "The easiest way is email, at ankitp2412 at gmail dot com. Or press Let's talk to send me a message right from this page." },
     { id: "how", keys: ["how did you build", "how was this built", "this site", "this website", "voice", "sarvam", "wispr", "made this"], section: "how",
       answer: "I built this site by voice with Wispr Flow and Emergent, then rebuilt it with Claude Code. The voice you're hearing is recorded with Sarvam AI." },
   ],
