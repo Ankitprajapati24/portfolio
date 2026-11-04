@@ -1,0 +1,55 @@
+# Writing desk for portfolio.codebread.fun/blog (Decap CMS).
+# Publishing saves the post as a Markdown file in content/posts/ on GitHub, and the site rebuilds.
+# Only GitHub accounts with write access to the repo can sign in and publish.
+backend:
+  name: github
+  repo: Ankitprajapati24/portfolio
+  branch: main
+  commit_messages:
+    create: "Blog: publish “{{slug}}”"
+    update: "Blog: update “{{slug}}”"
+    delete: "Blog: delete “{{slug}}”"
+    uploadMedia: "Blog: upload {{path}}"
+    deleteMedia: "Blog: delete {{path}}"
+
+# On your own PC (npm run dev + npm run cms) you can write without signing in.
+local_backend: true
+
+site_url: https://portfolio.codebread.fun
+display_url: https://portfolio.codebread.fun/blog
+logo_url: https://portfolio.codebread.fun/favicon.svg
+
+media_folder: public/assets/blog
+public_folder: /assets/blog
+
+collections:
+  - name: posts
+    label: Posts
+    label_singular: Post
+    description: Blogs and vlogs shown on portfolio.codebread.fun/blog. Newest first.
+    folder: content/posts
+    create: true
+    slug: "{{slug}}"
+    preview_path: "blog/{{slug}}"
+    summary: "{{type}} · {{title}} · {{date}}"
+    sortable_fields: ["date", "title"]
+    view_filters:
+      - { label: Blogs, field: type, pattern: blog }
+      - { label: Vlogs, field: type, pattern: vlog }
+      - { label: Drafts, field: draft, pattern: true }
+    fields:
+      - { label: Title, name: title, widget: string }
+      - label: Type
+        name: type
+        widget: select
+        default: blog
+        options:
+          - { label: "Blog (written post)", value: blog }
+          - { label: "Vlog (video post)", value: vlog }
+      - { label: Date, name: date, widget: datetime, format: "YYYY-MM-DD", date_format: "DD MMM YYYY", time_format: false, picker_utc: true }
+      - { label: Short description, name: description, widget: text, hint: "One or two lines. Shown on the blog list and in link previews on X and LinkedIn." }
+      - { label: Cover image, name: cover, widget: image, required: false, hint: "Optional. For vlogs the YouTube thumbnail is used automatically." }
+      - { label: Video link, name: video, widget: string, required: false, hint: "For vlogs: paste a YouTube link (watch, youtu.be or Shorts)." }
+      - { label: Tags, name: tags, widget: list, required: false, hint: "Comma separated, e.g. AI, IoT, Hackathon" }
+      - { label: Draft, name: draft, widget: boolean, default: false, hint: "Drafts are saved but not shown on the live site." }
+      - { label: Body, name: body, widget: markdown }

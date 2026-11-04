@@ -233,6 +233,8 @@ export const ASK = {
       answer: "I'm doing a BS in Data Science at IIT Madras and a B.Tech in Computer Science at IIST Indore. I graduate in 2027." },
     { id: "contact", keys: ["contact", "email", "reach", "hire", "phone", "linkedin", "github", "talk", "connect", "resume"], section: "contact",
       answer: "The easiest way is email, at ankitp2412 at gmail dot com. Or press Let's talk to send me a message right from this page." },
+    { id: "blog", keys: ["blog", "blogs", "vlog", "vlogs", "write", "writing", "articles", "posts", "videos"], section: null,
+      answer: "I write blogs and post vlogs about what I build. Press Blog at the top of this page to read them." },
     { id: "play", keys: ["game", "games", "play", "fun", "bored", "bug squash", "memory game", "quiz"], section: "play",
       answer: "There are three small games on this page. Squash bugs before the deploy, match the cards from my tech stack, or guess which Indian script my surname is written in. Have fun!" },
     { id: "how", keys: ["how did you build", "how was this built", "this site", "this website", "voice", "sarvam", "wispr", "made this"], section: "how",

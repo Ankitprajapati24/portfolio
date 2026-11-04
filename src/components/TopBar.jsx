@@ -176,6 +176,7 @@ export default function TopBar() {
       </p>
       <div className="flex items-center gap-4 sm:gap-6">
         <div className="flex items-center gap-4">
+          <a href="/blog" className="rounded-full border-2 border-ink px-3 py-1 text-sm font-semibold hover:bg-sun transition-colors">Blog</a>
           <MusicMenu />
           <Socials className="hidden sm:flex gap-4" />
         </div>

@@ -26,3 +26,34 @@ html.lenis body {
 .lenis.lenis-stopped {
   overflow: hidden;
 }
+
+/* Blog posts: Medium-style reading (serif body, bold display headings, brand links). */
+.blog-prose {
+  --tw-prose-body: #1f2937;
+  --tw-prose-headings: #0a0a0a;
+  --tw-prose-links: #e85d00;
+  --tw-prose-bold: #0a0a0a;
+  --tw-prose-quotes: #0a0a0a;
+  --tw-prose-quote-borders: #ff6b00;
+  --tw-prose-bullets: #ff6b00;
+  --tw-prose-counters: #e85d00;
+  --tw-prose-code: #0a0a0a;
+  font-family: "Source Serif 4", Georgia, serif;
+}
+.blog-prose :where(h1, h2, h3, h4) {
+  font-family: "Cabinet Grotesk", "Outfit", sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+}
+.blog-prose :where(a) { text-underline-offset: 3px; }
+.blog-prose :where(img) { border-radius: 1rem; border: 2px solid #0a0a0a; }
+.blog-prose :where(blockquote) { font-style: italic; font-weight: 400; }
+.blog-prose :where(code):not(:where(pre *)) {
+  background: #fff3c4;
+  border-radius: 0.375rem;
+  padding: 0.1em 0.35em;
+  font-weight: 500;
+}
+.blog-prose :where(code):not(:where(pre *))::before,
+.blog-prose :where(code):not(:where(pre *))::after { content: none; }
+.blog-prose :where(pre) { background: #0d1117; border-radius: 1rem; }

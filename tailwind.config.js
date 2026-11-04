@@ -1,6 +1,8 @@
+import typography from "@tailwindcss/typography";
+
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{js,jsx}"],
+  content: ["./index.html", "./blog/index.html", "./src/**/*.{js,jsx}"],
   theme: {
     extend: {
       colors: {
@@ -16,6 +18,7 @@ export default {
       fontFamily: {
         display: ['"Cabinet Grotesk"', "Outfit", "sans-serif"],
         body: ["Outfit", "sans-serif"],
+        "serif-read": ['"Source Serif 4"', "Georgia", "serif"],
         mono: ['"JetBrains Mono"', "Menlo", "monospace"],
         script: [
           '"Cabinet Grotesk"',
@@ -31,5 +34,5 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [typography],
 };

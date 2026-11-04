@@ -110,7 +110,21 @@ export default function Hero() {
             </motion.span>
           </AnimatePresence>
         </div>
-        <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-slate-400 h-4">{surname.lang}</p>
+        {/* Changes in step with the name above (same exit-then-enter timing). */}
+        <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-slate-400 h-4">
+          <AnimatePresence mode="wait">
+            <motion.span
+              key={surname.lang}
+              initial={reduced ? false : { opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.45 }}
+              className="inline-block"
+            >
+              {surname.lang}
+            </motion.span>
+          </AnimatePresence>
+        </p>
         </div>
 
         <p className="font-mono text-xs sm:text-sm text-slate-500 mt-8">{HERO.tagline}</p>

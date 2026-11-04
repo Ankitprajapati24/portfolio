@@ -34,3 +34,31 @@ All text lives in `src/data/content.js`. Each section's `speak` field is what th
 
 ## Music
 Edit `MUSIC.stations` in `src/data/content.js` to change the radio stations (HTTPS stream links, e.g. from radio-browser.info). Add Spotify song or playlist links to `MUSIC.spotify` to list them under "Top on Spotify".
+
+## Blog & vlog (portfolio.codebread.fun/blog)
+
+Every post is a Markdown file in `content/posts/`. The file name becomes the URL (`/blog/<file-name>`).
+
+**Write in the browser:** open `portfolio.codebread.fun/admin`, sign in with GitHub, press **New Post**.
+Only GitHub accounts with write access to this repo can sign in and publish. Publishing commits the post to
+GitHub and Netlify rebuilds the site in about a minute.
+
+**Write on your PC (no sign-in):** run `npm run dev` and `npm run cms` in two terminals, then open
+`http://localhost:5173/admin/`. Commit and push the new file when you're happy.
+
+Post settings (top of each file):
+
+```yaml
+---
+title: My post
+type: blog            # blog = written post, vlog = video post
+date: 2026-11-04
+description: One or two lines for the list and link previews.
+cover: /assets/blog/my-image.jpg   # optional
+video: https://youtu.be/XXXXXXXXXXX # vlogs: any YouTube link
+tags: [AI, IoT]
+draft: false          # true = saved but hidden on the live site
+---
+```
+
+`npm run build` also writes a page per post with its own link preview (X, LinkedIn, WhatsApp) and an RSS feed at `/blog/rss.xml`.

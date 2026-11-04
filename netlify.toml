@@ -16,3 +16,9 @@
   for = "/assets/*"
   [headers.values]
     Cache-Control = "public, max-age=604800"
+
+# Blog: post pages are pre-built at /blog/<slug>/; anything else under /blog falls back to the blog app.
+[[redirects]]
+  from = "/blog/*"
+  to = "/blog/index.html"
+  status = 200

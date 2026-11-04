@@ -5,18 +5,22 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/blog-pages.mjs",
     "preview": "vite preview",
-    "voice": "node scripts/make-voice.mjs"
+    "voice": "node scripts/make-voice.mjs",
+    "cms": "npx decap-server"
   },
   "dependencies": {
     "framer-motion": "^11.11.0",
     "lenis": "^1.1.13",
     "lucide-react": "^0.454.0",
+    "marked": "^18.1.3",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "yaml": "^2.9.1"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.20",
     "@vitejs/plugin-react": "^4.3.3",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.47",
