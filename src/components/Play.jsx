@@ -1,13 +1,15 @@
 import { useState } from "react";
-import { Bug, Languages, LayoutGrid } from "lucide-react";
+import { Bug, Languages, LayoutGrid, Swords } from "lucide-react";
 import Section from "./Section";
 import { PLAY } from "../data/content";
 import { useBest } from "./games/shared";
 import BugSquash from "./games/BugSquash";
 import StackMatch from "./games/StackMatch";
 import ScriptQuiz from "./games/ScriptQuiz";
+import NinjaRider from "./games/NinjaRider";
 
 const GAMES = {
+  ninja: { Game: NinjaRider, Icon: Swords, color: "bg-ink text-sun" },
   bugs: { Game: BugSquash, Icon: Bug, color: "bg-accent text-white" },
   match: { Game: StackMatch, Icon: LayoutGrid, color: "bg-sun text-ink" },
   scripts: { Game: ScriptQuiz, Icon: Languages, color: "bg-ink text-white" },
@@ -29,7 +31,7 @@ export default function Play() {
     <Section id="play" data={PLAY} dotted>
       <p className="max-w-2xl text-lg text-slate-700 -mt-4 mb-10">{PLAY.intro}</p>
       <div className="grid grid-cols-1 lg:grid-cols-[300px_minmax(0,1fr)] gap-6 lg:gap-8 items-start">
-        <div role="tablist" aria-label="Games" className="min-w-0 grid sm:grid-cols-3 lg:grid-cols-1 gap-3">
+        <div role="tablist" aria-label="Games" className="min-w-0 grid sm:grid-cols-2 lg:grid-cols-1 gap-3">
           {PLAY.games.map((g) => {
             const { Icon, color } = GAMES[g.id];
             const selected = g.id === active;

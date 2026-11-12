@@ -1,12 +1,12 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { ArrowUpRight, ChevronLeft, ChevronRight, Github, Hand, HeartPulse, Mail, Package, Server, Sparkles, Trophy, Vote, Workflow, X, Zap } from "lucide-react";
+import { ArrowUpRight, Cctv, ChevronLeft, ChevronRight, Github, Hand, HandHeart, HeartPulse, Mail, Mic, Package, Server, Sparkles, Swords, Trophy, Vote, Workflow, X, Zap } from "lucide-react";
 import Section from "./Section";
 import { BUILT, CONTACT, OTHER_PROJECTS } from "../data/content";
 import { lockScroll, unlockScroll } from "../lib/ui";
 
-const ICONS = { workflow: Workflow, server: Server, zap: Zap, vote: Vote, "heart-pulse": HeartPulse, hand: Hand };
+const ICONS = { workflow: Workflow, server: Server, zap: Zap, vote: Vote, "heart-pulse": HeartPulse, hand: Hand, swords: Swords, cctv: Cctv, "hand-heart": HandHeart, mic: Mic };
 const TONES = {
   ink: { bg: "bg-ink", fg: "text-white", sub: "text-slate-400", dots: "dot-grid-dark" },
   sun: { bg: "bg-sun", fg: "text-ink", sub: "text-ink/70", dots: "dot-grid" },
