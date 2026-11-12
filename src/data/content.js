@@ -1,4 +1,4 @@
-// All portfolio facts live here (transcribed from Ankit_Prajapati_Resume.pdf).
+// Shared portfolio copy. Keep visible text, spoken answers, and the resume consistent.
 // `title` is the section heading. `speak` is what "Know about me" reads aloud.
 
 export const NAME = "Ankit Prajapati";
@@ -9,23 +9,27 @@ export const SURNAME_SCRIPTS = [
   { text: "প্রজাপতি", lang: "Bengali" },
   { text: "ప్రజాపతి", lang: "Telugu" },
   { text: "પ્રજાપતિ", lang: "Gujarati" },
-  { text: "பிரஜாபதி", lang: "Tamil" },
   { text: "Prajapati", lang: "English" },
 ];
 
 export const HERO = {
-  tagline: "AI & machine learning · Connected devices · Full-stack",
-  speak: "Hi! I'm Ankit Prajapati. Let me tell you a little about myself.",
+  "tagline": "AI engineering · Computer vision · LLM applications",
+  "speak": "Hi! Let me tell you a little about myself."
 };
 
 export const ABOUT = {
-  label: "About",
-  title: "A bit about me",
-  stickerWords: ["voice", "vision", "edge devices", "backends"],
-  answer: [
-    "I'm Ankit Prajapati. I build across AI, connected devices, and full-stack software. I'm pursuing a BS in Data Science at IIT Madras and a B.Tech in Computer Science at IIST, Indore.",
-    "My projects turn ideas into working systems: detecting power-line faults at the edge, translating sign language into speech, and generating backends from a prompt. I like owning the whole line, from the model to the product people actually use.",
+  "label": "About",
+  "title": "A bit about me",
+  "stickerWords": [
+    "voice",
+    "vision",
+    "edge devices",
+    "backends"
   ],
+  "answer": [
+    "I'm Ankit Prajapati, a computer science and data science student pursuing a B.Tech in Computer Science Engineering at IIST Indore alongside a BS in Data Science at IIT Madras.",
+    "I build AI applications and explore how agents learn to make decisions. My work spans computer vision, LLM applications, and reinforcement learning, with a focus on turning ideas into useful software."
+  ]
 };
 
 export const SKILL_GROUPS = [
@@ -38,122 +42,404 @@ export const SKILL_GROUPS = [
 export const SKILLS = SKILL_GROUPS.flatMap((g) => g.items);
 
 export const STACK = {
-  label: "Stack",
-  title: "What I work with",
-  speak:
-    "Here's what I work with. My main languages are Python, C and C plus plus, Java, JavaScript and SQL. I build with Flask, Django, React, Node.js and FastAPI, and for machine learning I use PyTorch, TensorFlow, OpenCV, LangChain and Hugging Face. I'm comfortable with LLMs, RAG and prompt engineering, and I live in Linux and Git every day.",
+  "label": "Stack",
+  "title": "What I work with",
+  "speak": "I use Python for AI and research experiments, with OpenCV, MediaPipe, PyTorch, and TensorFlow for computer vision and machine learning. I build applications with Flask, FastAPI, Django, React, and Node.js, and use Git and Linux throughout development."
 };
 
 export const NOW = {
-  label: "Now",
-  title: "What I'm doing right now",
-  script: [
-    { cmd: "whoami", out: ["ankit_prajapati — AI · IoT · full-stack", "BS Data Science, IIT Madras · B.Tech CSE, IIST Indore"] },
+  "label": "Now",
+  "title": "My current research",
+  "script": [
     {
-      cmd: "cat now.txt",
-      out: [
-        "role      → Undergraduate Research Intern, IIT Madras (Jul 2026 – present)",
-        "guide     → Prof. Rahul H. Meshram, Dept. of Electrical Engineering",
-        "topics    → MDPs · dynamic programming · Q-Learning",
-        "built     → a Python grid-world comparing planning and model-free learning",
-      ],
+      "cmd": "whoami",
+      "out": [
+        "ankit_prajapati — AI applications · Computer vision · Reinforcement learning",
+        "B.Tech CSE, IIST Indore · BS Data Science, IIT Madras"
+      ]
     },
+    {
+      "cmd": "cat now.txt",
+      "out": [
+        "role      → Undergraduate Research Intern, IIT Madras (Jul 2026 – Dec 2026)",
+        "guide     → Prof. Rahul H. Meshram, Dept. of Electrical Engineering",
+        "topics    → MDPs · dynamic programming · Safe Q-learning",
+        "built     → a Python grid-world comparing planning and model-free learning"
+      ]
+    }
   ],
-  speak:
-    "Right now, I'm an undergraduate research intern at IIT Madras, working with Professor Rahul H. Meshram in the Department of Electrical Engineering. I'm studying Markov decision processes, dynamic programming and Q-Learning, and I built a Python grid-world to compare planning with model-free learning.",
+  "speak": "I'm an undergraduate research intern at IIT Madras, working with Professor Rahul H. Meshram in the Department of Electrical Engineering. My internship runs from July to December 2026, and my work focuses on dynamic programming and Safe Q-learning for Markov decision processes, using Python grid-world experiments."
 };
 
 export const PROJECTS = [
-  { id: "signecho", title: "SignEcho", app: { icon: "hand", tone: "sun", line: "Sign language → speech" }, desc: "Real-time sign language to speech and text, powered by a CNN + MediaPipe pipeline and tested with real users in a web app.", tags: ["OpenCV", "PyTorch", "MediaPipe"], award: "Apratim Srajan 2025 · Winner", href: "https://friendly-beignet-24aabc.netlify.app/", linkLabel: "Live demo", source: "https://github.com/Ankitprajapati24/SignEcho", images: ["assets/projects/signecho-cover.jpg"] },
-  { id: "archflow", title: "ArchFlow", latest: true, desc: "Describe a software idea in plain English and get structured architecture designs, UML diagrams (ERD, class, sequence, activity, DFD), SQL schemas and a complete SRS document, ready to export as PDF, DOCX, PNG or SQL.", tags: ["AI", "System design", "UML", "Mermaid.js", "SQL"], href: "https://arcflow.codebread.fun", linkLabel: "Visit project", images: ["assets/projects/archflow.jpg", "assets/projects/archflow-2.jpg"], app: { icon: "workflow", tone: "ink" } },
-  { id: "backend-pilot", title: "Backend Pilot", desc: "A natural-language prompt becomes a backend: APIs, folder structure, and tests. Built with LLM-powered generation and structured prompt pipelines.", tags: ["LLMs", "Groq API", "Code generation"], href: "https://backendpilot.onrender.com/", linkLabel: "Visit project", images: ["assets/projects/backend-pilot.jpg", "assets/projects/backend-pilot-cover.jpg"], app: { icon: "server", tone: "accent" } },
-  { id: "sera", title: "SERA", desc: "Edge AI for power-line safety. Detects high-impedance faults using an LSTM model, with automatic phase isolation and remote monitoring.", tags: ["IoT", "Edge AI", "LSTM"], award: "SIH 2025 · Winner", href: "https://github.com/Ankitprajapati24/sera_dashboard_main.git", linkLabel: "View source", images: ["assets/projects/sera-cover.jpg"], app: { icon: "zap", tone: "ink", line: "Edge AI · Power-line safety" } },
-  { id: "eduvote", title: "EduVote", desc: "A digital voting system for student elections, with secure sign-in, role-based access, and real-time election analytics.", tags: ["React", "Node.js", "MongoDB", "Firebase Auth"], href: "https://ewsc-chi.vercel.app/", linkLabel: "Live demo", images: ["assets/projects/election-cover.jpg"], app: { icon: "vote", tone: "sun", line: "Student elections, online" } },
-  { id: "saathi", title: "Saathi", desc: "A smart medicine dispenser and health companion: reminders, heartbeat and fall detection, and caregiver alerts. I contributed backend logic and sensor integration.", tags: ["ESP32", "TensorFlow", "Flutter", "Firebase"], href: "https://saathi.flutterflow.app/", linkLabel: "Visit project", images: ["assets/projects/saathi-cover.jpg"], app: { icon: "heart-pulse", tone: "accent", line: "Health companion · IoT" } },
+  {
+    "id": "signecho",
+    "title": "SignEcho",
+    "app": {
+      "icon": "hand",
+      "tone": "sun",
+      "line": "Gesture interface · Prototype"
+    },
+    "desc": "Gesture recognition and speech prototypes built with Python, MediaPipe, and OpenCV, with 79.6% reported model accuracy. The linked ANANTAH web interface demonstrates simulated translation.",
+    "tags": [
+      "Python",
+      "OpenCV",
+      "MediaPipe"
+    ],
+    "award": "Apratim Srajan 2025 · Winner",
+    "href": "https://friendly-beignet-24aabc.netlify.app/",
+    "linkLabel": "UI prototype (simulated)",
+    "images": [
+      "assets/projects/signecho-cover.jpg"
+    ]
+  },
+  {
+    "id": "archflow",
+    "title": "ArchFlow",
+    "latest": true,
+    "desc": "Turns software requirements into architecture diagrams, SQL schemas, and software requirements documents, with export options for PDF, DOCX, PNG, and SQL.",
+    "tags": [
+      "AI",
+      "System design",
+      "UML",
+      "Mermaid.js",
+      "SQL"
+    ],
+    "href": "https://arcflow.codebread.fun",
+    "linkLabel": "Visit project",
+    "images": [
+      "assets/projects/archflow.jpg",
+      "assets/projects/archflow-2.jpg"
+    ],
+    "app": {
+      "icon": "workflow",
+      "tone": "ink"
+    }
+  },
+  {
+    "id": "backend-pilot",
+    "title": "Backend Pilot",
+    "desc": "Generates backend API code, project structure, and tests from natural-language requirements using Groq APIs and structured prompt pipelines.",
+    "tags": [
+      "LLMs",
+      "Groq API",
+      "Code generation"
+    ],
+    "href": "https://backendpilot.onrender.com/",
+    "linkLabel": "Visit project",
+    "images": [
+      "assets/projects/backend-pilot.jpg",
+      "assets/projects/backend-pilot-cover.jpg"
+    ],
+    "app": {
+      "icon": "server",
+      "tone": "accent"
+    }
+  },
+  {
+    "id": "ninja-rider",
+    "title": "Ninja Rider",
+    "desc": "A 90-second browser game built with Three.js. Ride through a cherry-blossom field, jump hurdles, collect spirit orbs, and slash targets, with an online leaderboard and music generated in code.",
+    "tags": [
+      "Three.js",
+      "WebGL",
+      "Web Audio",
+      "Netlify Functions",
+      "PostgreSQL"
+    ],
+    "href": "https://games.codebread.fun",
+    "linkLabel": "Live demo",
+    "images": [
+      "assets/projects/ninja-rider-cover.jpg"
+    ],
+    "app": {
+      "icon": "swords",
+      "tone": "sun",
+      "line": "3D game · Online leaderboard"
+    }
+  },
+  {
+    "id": "sera",
+    "title": "SERA",
+    "desc": "Monitoring dashboard for the SIH-winning SERA power-line safety prototype, with node telemetry and phase-command interfaces. The public snapshot does not include the fault-detection model or physical isolation hardware integration.",
+    "tags": [
+      "IoT",
+      "Edge AI",
+      "LSTM"
+    ],
+    "award": "SIH 2025 · Winner",
+    "href": "https://github.com/Ankitprajapati24/sera_dashboard_main",
+    "linkLabel": "Dashboard source",
+    "images": [
+      "assets/projects/sera-cover.jpg"
+    ],
+    "app": {
+      "icon": "zap",
+      "tone": "ink",
+      "line": "Edge AI · Power-line safety"
+    }
+  },
+  {
+    "id": "eduvote",
+    "title": "EduVote",
+    "desc": "Student election administration prototype with Firebase sign-in, student and candidate management, and Firestore-backed dashboard statistics. The published student voting flow is incomplete.",
+    "tags": [
+      "React",
+      "Firebase Auth",
+      "Firestore",
+      "Cloud Functions"
+    ],
+    "href": "https://ewsc-chi.vercel.app/",
+    "linkLabel": "Live demo",
+    "images": [
+      "assets/projects/election-cover.jpg"
+    ],
+    "app": {
+      "icon": "vote",
+      "tone": "sun",
+      "line": "Election administration · Prototype"
+    }
+  },
+  {
+    "id": "saathi",
+    "title": "Saathi",
+    "desc": "An IoT medicine-dispenser and health-monitoring prototype with reminders, sensor data, and caregiver alerts. I contributed backend logic and sensor integration.",
+    "tags": [
+      "ESP32",
+      "TensorFlow",
+      "Flutter",
+      "Firebase"
+    ],
+    "href": "https://saathi.flutterflow.app/",
+    "linkLabel": "Visit project",
+    "images": [
+      "assets/projects/saathi-cover.jpg"
+    ],
+    "app": {
+      "icon": "heart-pulse",
+      "tone": "accent",
+      "line": "Health companion · IoT"
+    }
+  },
+  {
+    "id": "watch-tower",
+    "title": "Watch Tower",
+    "desc": "A campus-security prototype that reads vehicle number plates using Python, OpenCV, and EasyOCR, with a web interface for the recognition workflow.",
+    "tags": [
+      "Python",
+      "OpenCV",
+      "EasyOCR",
+      "React",
+      "Next.js"
+    ],
+    "award": "Cognizance, IIT Roorkee · Runner-up",
+    "href": "https://colab.research.google.com/drive/1I5jV6qwSMCu3N1rFhje7H3uC7sAwGAhv?usp=sharing",
+    "linkLabel": "Visit project",
+    "source": "https://github.com/Ankitprajapati24/Watch-Tower-Security-System-for-the-Institute-",
+    "images": [
+      "assets/projects/watch-tower-cover.jpg"
+    ],
+    "app": {
+      "icon": "cctv",
+      "tone": "ink",
+      "line": "Number plates · OCR"
+    }
+  },
+  {
+    "id": "sahara",
+    "title": "SAHARA",
+    "desc": "Website for SAHARA, the social welfare society of the IIT Madras BS degree program. It brings together the society's mission, activities, events, and team.",
+    "tags": [
+      "HTML",
+      "Tailwind CSS",
+      "JavaScript",
+      "Flask",
+      "MySQL"
+    ],
+    "href": "https://sahara-society.github.io/Sahara/",
+    "linkLabel": "Visit project",
+    "images": [
+      "assets/projects/sahara-cover.jpg"
+    ],
+    "app": {
+      "icon": "hand-heart",
+      "tone": "accent",
+      "line": "Social welfare society"
+    }
+  },
+  {
+    "id": "jarvis",
+    "title": "Jarvis",
+    "desc": "A Python desktop assistant that responds to voice commands, searches Wikipedia, opens websites and applications, plays music, and speaks replies.",
+    "tags": [
+      "Python",
+      "Speech Recognition",
+      "pyttsx3",
+      "Wikipedia API"
+    ],
+    "href": "https://github.com/Ankitprajapati24/Jarvis",
+    "linkLabel": "View source",
+    "images": [
+      "assets/projects/jarvis-cover.jpg"
+    ],
+    "app": {
+      "icon": "mic",
+      "tone": "ink",
+      "line": "Voice assistant · Desktop"
+    }
+  }
 ];
 export const FEATURED = PROJECTS[0];
 export const OTHER_PROJECTS = PROJECTS.slice(1);
 
 export const PROUD = {
-  label: "Featured",
-  title: "The one I'm proudest of",
-  image: "assets/projects/signecho-cover.jpg",
-  pipeline: ["Sign", "MediaPipe", "CNN", "Speech + text"],
-  speak:
-    "The project I'm proudest of is SignEcho. It translates sign language into speech and text in real time. It runs on a CNN and MediaPipe pipeline, I tested it with real users, and it won Apratim Srajan 2025 at IIST Indore.",
+  "label": "Featured",
+  "title": "A project I care about",
+  "image": "assets/projects/signecho-cover.jpg",
+  "pipeline": [
+    "Camera interface",
+    "Simulated translation",
+    "Text output"
+  ],
+  "speak": "SignEcho explores gesture recognition and speech output using Python, MediaPipe, and OpenCV. The reported model accuracy is 79.6 percent. It won Apratim Srajan 2025 at IIST Indore, and the linked web interface demonstrates simulated translation separately."
 };
 
 export const BUILT = {
-  label: "Projects",
-  title: "More things I've built",
-  speak:
-    "I've built a few more things too. My latest is ArchFlow: describe a software idea in plain English, and it designs the architecture, draws the UML diagrams, writes the SQL schema and the full SRS document. Backend Pilot turns a plain-English prompt into a backend, with APIs, folder structure and tests. SERA is edge AI for power-line safety that detects high-impedance faults with an LSTM model, and it won Smart India Hackathon 2025. EduVote is a digital voting system for student elections. And on Saathi, a smart medicine dispenser and health companion, I contributed backend logic and sensor integration.",
+  "label": "Projects",
+  "title": "Projects I've built",
+  "speak": "My projects explore AI applications, connected devices, and web software. ArchFlow generates architecture diagrams and requirements documents, while Backend Pilot generates backend code. SERA is a power-line monitoring prototype, EduVote supports election administration, and Saathi connects medicine reminders with health monitoring. I also build beyond AI, including Ninja Rider, a browser game, and the website for the SAHARA social welfare society."
 };
 
 export const ACHIEVEMENTS = {
-  label: "Achievements",
-  title: "Wins along the way",
-  results: [
-    { title: "Winner", event: "Smart India Hackathon", place: null, year: "2025", project: "SERA", href: "https://drive.google.com/file/d/1YKdYIWOJF4H6yAqfipCRtujbSSY5QZrv/view?usp=sharing" },
-    { title: "Winner", event: "Apratim Srajan", place: "IIST Indore", year: "2025", project: "SignEcho", href: "https://drive.google.com/file/d/1R9o6EwuZOOrk80raAnE0N3ViaA9hMpTP/view?usp=drive_link" },
-    { title: "Finalist", event: "Hacksagon", place: "ABV-IIITM Gwalior", year: "2025", href: "https://drive.google.com/drive/folders/1haNkRVWD4txV2-kD69WT6gGzA2aleYr1?usp=drive_link" },
-    { title: "Finalist", event: "S&T IISF", place: "IIT Guwahati", year: "2024", href: "https://drive.google.com/file/d/1I2Gldni2k94B1yxdMMZ-XsJxkE3F3mV3/view?usp=sharing" },
-    { title: "Runner-up", event: "Cognizance Watch Tower", place: "IIT Roorkee", year: "2023" },
+  "label": "Achievements",
+  "title": "Milestones along the way",
+  "results": [
+    {
+      "title": "Winner",
+      "event": "Smart India Hackathon",
+      "place": null,
+      "year": "2025",
+      "project": "SERA",
+      "href": "https://drive.google.com/file/d/1YKdYIWOJF4H6yAqfipCRtujbSSY5QZrv/view?usp=sharing"
+    },
+    {
+      "title": "Winner",
+      "event": "Apratim Srajan",
+      "place": "IIST Indore",
+      "year": "2025",
+      "project": "SignEcho",
+      "href": "https://drive.google.com/file/d/1R9o6EwuZOOrk80raAnE0N3ViaA9hMpTP/view?usp=drive_link"
+    },
+    {
+      "title": "Finalist",
+      "event": "Hacksagon",
+      "place": "ABV-IIITM Gwalior",
+      "year": "2025",
+      "href": "https://drive.google.com/drive/folders/1haNkRVWD4txV2-kD69WT6gGzA2aleYr1?usp=drive_link"
+    },
+    {
+      "title": "Finalist",
+      "event": "S&T IISF",
+      "place": "IIT Guwahati",
+      "year": "2024",
+      "href": "https://drive.google.com/file/d/1I2Gldni2k94B1yxdMMZ-XsJxkE3F3mV3/view?usp=sharing"
+    },
+    {
+      "title": "Runner-up",
+      "event": "Cognizance Watch Tower",
+      "place": "IIT Roorkee",
+      "year": "2023"
+    }
   ],
-  speak:
-    "Along the way, I've picked up a few wins. I won Smart India Hackathon 2025 with SERA, and Apratim Srajan 2025 at IIST Indore with SignEcho. I was a finalist at Hacksagon at ABV-IIITM Gwalior, and at S and T IISF at IIT Guwahati. And I was runner-up at Cognizance Watch Tower at IIT Roorkee. The certificates are linked right here.",
+  "speak": "I won Smart India Hackathon 2025 with SERA and Apratim Srajan 2025 at IIST Indore with SignEcho. I was a finalist at Hacksagon at ABV-IIITM Gwalior and at S and T IISF at IIT Guwahati. I was also runner-up at Cognizance Watch Tower at IIT Roorkee. Several certificates are linked here."
 };
 
 // Latest first.
 export const TIMELINE = [
-  { org: "IIT Madras", role: "Undergraduate Research Intern", period: "Jul 2026 – Present", note: "Research with Prof. Rahul H. Meshram, Dept. of EE: MDPs, dynamic programming and Q-Learning. Built a Python grid-world to compare planning and model-free learning.", current: true },
-  { org: "Klover.AI", role: "AI Engineer · Open Source Contributor", period: "Jan 2025 – Apr 2025", note: "Built multi-agent workflows for automated decision-making and fault recovery. Collaborated remotely on modular, reusable agents and deployable AI pipelines." },
-  { org: "Graduating", role: "IIT Madras · BS in Data Science", period: "2027", note: "BS in Data Science from IIT Madras (May 2027), alongside a B.Tech in Computer Science Engineering from IIST Indore (Jun 2027).", future: true },
+  {
+    "org": "IIT Madras",
+    "role": "Undergraduate Research Intern",
+    "period": "Jul 2026 – Dec 2026",
+    "note": "Working with Prof. Rahul H. Meshram in the Department of Electrical Engineering on dynamic programming and Safe Q-learning for Markov decision processes. Built Python grid-world experiments to compare planning and model-free learning.",
+    "current": true
+  },
+  {
+    "org": "Klover.AI",
+    "role": "AI Engineer Intern",
+    "period": "Jan 2025 – Apr 2025",
+    "note": "Contributed AI agent prototypes to Klover's open-source initiative through team meetings and iterative development assignments."
+  },
+  {
+    "org": "Graduating",
+    "role": "IIST Indore · B.Tech in Computer Science Engineering",
+    "period": "2023 – 2027",
+    "note": "Expected to complete a B.Tech in Computer Science Engineering at IIST Indore in June 2027.",
+    "future": true
+  }
 ];
 
 export const EXPERIENCE = {
-  label: "Experience",
-  title: "Where I've worked",
-  // Three sentences: the timeline slides to the next card on each one.
-  speak:
-    "Right now, I'm a research intern at IIT Madras, working on Markov decision processes, dynamic programming and Q-Learning. Before that, from January to April 2025, I was an AI engineer and open source contributor at Klover AI, building multi-agent workflows for automated decision-making and fault recovery. And in 2027, I graduate with a BS in Data Science from IIT Madras, alongside my B.Tech in Computer Science from IIST Indore.",
+  "label": "Experience",
+  "title": "Research and experience",
+  "speak": "I'm currently an undergraduate research intern at IIT Madras, working on dynamic programming and Safe Q-learning. From January to April 2025, I was an AI engineer intern at Klover AI, contributing AI agent prototypes through team meetings and iterative assignments. I expect to complete my B.Tech in Computer Science Engineering at IIST Indore and BS in Data Science at IIT Madras in 2027."
 };
 
 export const HOW = {
-  label: "Behind the scenes",
-  title: "How I built this",
-  answer:
-    "I built this site by voice with Wispr Flow and Emergent, then rebuilt it with Claude Code. It's React with Tailwind, Framer Motion for the animations, Lenis for smooth scrolling, and the browser's Web Speech API, which is the voice you're hearing. The background music streams from live internet radio stations.",
-  specs: ["React", "Tailwind", "Framer Motion", "Lenis", "Web Speech API", "Wispr Flow", "Emergent", "Claude Code"],
+  "label": "Behind the scenes",
+  "title": "How I built this",
+  "answer": "I built this portfolio with React and Tailwind CSS, using Framer Motion for animations and Lenis for smooth scrolling. Narration uses generated voice recordings, with browser speech synthesis as a fallback. Music is available through internet radio and Spotify.",
+  "specs": [
+    "React",
+    "Tailwind",
+    "Framer Motion",
+    "Lenis",
+    "Web Speech API",
+    "Wispr Flow",
+    "Emergent"
+  ]
 };
 
 export const PLAY = {
-  label: "Play",
-  title: "Take a quick break",
-  intro: "Built a few tiny games for you. Your best scores stay saved in this browser, and Echo cheers when you beat them.",
-  speak:
-    "Before you go, take a quick break. Squash some bugs before the deploy, match the cards from my tech stack, or guess which Indian script my surname is written in.",
-  games: [
-    { id: "bugs", name: "Bug Squash", blurb: "Squash bugs before the deploy. Don't touch my coffee." },
-    { id: "match", name: "Stack Match", blurb: "Flip the cards and pair up my tech stack." },
-    { id: "scripts", name: "Name in Scripts", blurb: "My surname in six Indian scripts. Can you tell them apart?" },
-  ],
+  "label": "Play",
+  "title": "Take a quick break",
+  "intro": "Take a break with a game. Best scores for the mini games stay in this browser, and Echo cheers when you beat them. Ninja Rider has its own online leaderboard.",
+  "speak": "Try a quick game: squash bugs, match the cards from my tech stack, or identify the Indian scripts used in my surname. For a longer challenge, ride, jump, and slash in Ninja Rider.",
+  "games": [
+    {
+      "id": "ninja",
+      "name": "Ninja Rider",
+      "blurb": "Ride, jump and slash for 90 seconds. Online leaderboard."
+    },
+    {
+      "id": "bugs",
+      "name": "Bug Squash",
+      "blurb": "Squash bugs before the deploy. Don't touch my coffee."
+    },
+    {
+      "id": "match",
+      "name": "Stack Match",
+      "blurb": "Flip the cards and pair up my tech stack."
+    },
+    {
+      "id": "scripts",
+      "name": "Name in Scripts",
+      "blurb": "My surname in six Indian scripts. Can you tell them apart?"
+    }
+  ]
 };
 
 export const CONTACT = {
-  label: "Contact",
-  title: "Let's build something",
-  email: "ankitp2412@gmail.com",
-  phone: "+91 73890 18024",
-  phoneHref: "+917389018024",
-  github: "https://github.com/Ankitprajapati24",
-  linkedin: "https://www.linkedin.com/in/ankitprajapati04/",
-  resume: "assets/Ankit_Prajapati_Resume.pdf",
-  // Web3Forms access key for the "Let's talk" form (free at web3forms.com, made for public sites).
-  web3formsKey: "70c679d7-19ee-40e4-814d-e1030a26d649",
-  answer: "From an idea to a working product, that's the part I love. I'm open to research, collaborations, and interesting opportunities.",
-  speak:
-    "From an idea to a working product, that's the part I love. I'm open to research, collaborations and interesting opportunities. Press Let's talk to send me a message. Thanks for stopping by!",
+  "label": "Contact",
+  "title": "Let's work together",
+  "email": "ankitp2412@gmail.com",
+  "phone": "+91 7389018024",
+  "phoneHref": "+917389018024",
+  "github": "https://github.com/Ankitprajapati24",
+  "linkedin": "https://www.linkedin.com/in/ankitprajapati04/",
+  "resume": "assets/Ankit_Prajapati_Resume.pdf",
+  "web3formsKey": "70c679d7-19ee-40e4-814d-e1030a26d649",
+  "answer": "I'm open to AI engineering opportunities, research collaborations, and projects where I can build and learn with a team. If my work fits what you're doing, I'd like to hear from you.",
+  "speak": "I'm open to AI engineering opportunities, research collaborations, and projects where I can build and learn with a team. If my work fits what you're doing, I'd like to hear from you. Email me, connect on LinkedIn, or use the Let's talk form. Thanks for visiting."
 };
 
 // Background music: live internet radio stations (from the public radio-browser.info directory).
@@ -201,44 +487,338 @@ export const STORY = [
 // in the same recorded voice. Answers use only facts from this page.
 // keys: words that point to a topic (more matches = better). section: where to scroll.
 export const ASK = {
-  suggestions: ["Who are you?", "What are you working on?", "Tell me about SignEcho", "What is ArchFlow?", "What have you won?", "How can I contact you?"],
-  topics: [
-    { id: "hello", keys: ["hello", "hi", "hey", "namaste", "good morning", "good evening"], section: null,
-      answer: "Hey, nice to meet you! Ask me about my projects, my research, my tech stack or my hackathon wins." },
-    { id: "about", keys: ["who are you", "about you", "yourself", "introduce", "who is ankit", "tell me about you", "background"], section: "about",
-      answer: "I'm Ankit Prajapati. I build across AI, connected devices and full-stack software. I'm pursuing a BS in Data Science at IIT Madras and a B.Tech in Computer Science at IIST Indore." },
-    { id: "now", keys: ["working on", "right now", "currently", "research", "intern", "internship", "iit madras", "q-learning", "reinforcement", "mdp", "markov"], section: "now",
-      answer: "Right now I'm an undergraduate research intern at IIT Madras, working with Professor Rahul H. Meshram. I'm studying Markov decision processes, dynamic programming and Q-Learning, and I built a Python grid-world to compare planning with model-free learning." },
-    { id: "stack", keys: ["stack", "skills", "tech", "language", "languages", "framework", "tools", "python", "react", "pytorch", "know"], section: "stack",
-      answer: "My main languages are Python, C and C plus plus, Java, JavaScript and SQL. I build with Flask, Django, FastAPI, React and Node.js, and for machine learning I use PyTorch, TensorFlow, OpenCV and LangChain." },
-    { id: "signecho", keys: ["signecho", "sign echo", "sign language", "sign", "deaf", "mediapipe", "proud"], section: "proud",
-      answer: "SignEcho translates sign language into speech and text in real time. It runs on a CNN and MediaPipe pipeline, I tested it with real users, and it won Apratim Srajan 2025 at IIST Indore." },
-    { id: "archflow", keys: ["archflow", "arch flow", "arc flow", "arcflow", "latest", "system design", "uml", "srs"], section: "projects",
-      answer: "ArchFlow is my latest project. You describe a software idea in plain English, and it designs the architecture, draws the UML diagrams, writes the SQL schema and a full SRS document." },
-    { id: "backend-pilot", keys: ["backend pilot", "pilot", "generate backend", "code generation", "prompt to backend"], section: "projects",
-      answer: "Backend Pilot turns a plain-English prompt into a backend, with APIs, folder structure and tests, using LLM-powered generation." },
-    { id: "sera", keys: ["sera", "power line", "power-line", "fault", "smart india", "sih", "lstm", "edge ai"], section: "projects",
-      answer: "SERA is edge AI for power-line safety. It detects high-impedance faults with an LSTM model, isolates the phase automatically and supports remote monitoring. It won Smart India Hackathon 2025." },
-    { id: "eduvote", keys: ["eduvote", "edu vote", "voting", "vote", "election"], section: "projects",
-      answer: "EduVote is a digital voting system for student elections, with secure sign-in, role-based access and real-time election analytics." },
-    { id: "saathi", keys: ["saathi", "sathi", "medicine", "health", "dispenser", "fall detection"], section: "projects",
-      answer: "Saathi is a smart medicine dispenser and health companion, with reminders, heartbeat and fall detection, and caregiver alerts. I contributed the backend logic and sensor integration." },
-    { id: "projects", keys: ["projects", "built", "build", "portfolio of work", "what have you made", "apps"], section: "projects",
-      answer: "My favourite is SignEcho, a sign language translator. I've also built ArchFlow, Backend Pilot, SERA, EduVote and Saathi. Tap any project card to see screenshots and live demos." },
-    { id: "wins", keys: ["won", "win", "wins", "award", "awards", "hackathon", "hackathons", "achievement", "achievements", "finalist", "prize"], section: "achievements",
-      answer: "I won Smart India Hackathon 2025 with SERA and Apratim Srajan 2025 with SignEcho. I was a finalist at Hacksagon at ABV-IIITM Gwalior and at S and T IISF at IIT Guwahati, and runner-up at Cognizance at IIT Roorkee." },
-    { id: "experience", keys: ["experience", "work", "worked", "job", "klover", "company", "companies"], section: "experience",
-      answer: "I'm currently a research intern at IIT Madras. Before that, from January to April 2025, I was an AI engineer and open source contributor at Klover AI, building multi-agent workflows for decision-making and fault recovery." },
-    { id: "education", keys: ["education", "study", "studying", "college", "degree", "university", "graduate", "graduation", "iist", "student"], section: "experience",
-      answer: "I'm doing a BS in Data Science at IIT Madras and a B.Tech in Computer Science at IIST Indore. I graduate in 2027." },
-    { id: "contact", keys: ["contact", "email", "reach", "hire", "phone", "linkedin", "github", "talk", "connect", "resume"], section: "contact",
-      answer: "The easiest way is email, at ankitp2412 at gmail dot com. Or press Let's talk to send me a message right from this page." },
-    { id: "blog", keys: ["blog", "blogs", "vlog", "vlogs", "write", "writing", "articles", "posts", "videos"], section: null,
-      answer: "I write blogs and post vlogs about what I build. Press Blog at the top of this page to read them." },
-    { id: "play", keys: ["game", "games", "play", "fun", "bored", "bug squash", "memory game", "quiz"], section: "play",
-      answer: "There are three small games on this page. Squash bugs before the deploy, match the cards from my tech stack, or guess which Indian script my surname is written in. Have fun!" },
-    { id: "how", keys: ["how did you build", "how was this built", "this site", "this website", "voice", "sarvam", "wispr", "made this"], section: "how",
-      answer: "I built this site by voice with Wispr Flow and Emergent, then rebuilt it with Claude Code. The voice you're hearing is recorded with Sarvam AI." },
+  "suggestions": [
+    "What do you build?",
+    "Tell me about your research",
+    "What is SignEcho?",
+    "What is ArchFlow?",
+    "What have you won?",
+    "How can I contact you?"
   ],
-  fallback: "Good question, but I don't have an answer for that one here. Email me at ankitp2412 at gmail dot com and I'll reply personally.",
+  "topics": [
+    {
+      "id": "hello",
+      "keys": [
+        "hello",
+        "hi",
+        "hey",
+        "namaste",
+        "good morning",
+        "good evening"
+      ],
+      "section": null,
+      "answer": "Hi, I'm Ankit. Ask me about my AI projects, research, technical skills, or hackathon work."
+    },
+    {
+      "id": "about",
+      "keys": [
+        "who are you",
+        "about you",
+        "yourself",
+        "introduce",
+        "who is ankit",
+        "tell me about you",
+        "background"
+      ],
+      "section": "about",
+      "answer": "I'm Ankit Prajapati, a computer science and data science student pursuing a B.Tech in Computer Science Engineering at IIST Indore alongside a BS in Data Science at IIT Madras. I build AI applications and explore how agents learn to make decisions. My work spans computer vision, LLM applications, and reinforcement learning, with a focus on turning ideas into useful software."
+    },
+    {
+      "id": "now",
+      "keys": [
+        "working on",
+        "right now",
+        "currently",
+        "research",
+        "intern",
+        "internship",
+        "iit madras",
+        "q-learning",
+        "reinforcement",
+        "mdp",
+        "markov",
+        "safe q-learning",
+        "safe q learning"
+      ],
+      "section": "now",
+      "answer": "I'm an undergraduate research intern at IIT Madras, working with Professor Rahul H. Meshram in the Department of Electrical Engineering. My internship runs from July to December 2026, and my work focuses on dynamic programming and Safe Q-learning for Markov decision processes, using Python grid-world experiments."
+    },
+    {
+      "id": "stack",
+      "keys": [
+        "stack",
+        "skills",
+        "tech",
+        "language",
+        "languages",
+        "framework",
+        "tools",
+        "python",
+        "react",
+        "pytorch",
+        "know"
+      ],
+      "section": "stack",
+      "answer": "I use Python for AI and research experiments, with OpenCV, MediaPipe, PyTorch, and TensorFlow for computer vision and machine learning. I build applications with Flask, FastAPI, Django, React, and Node.js, and use Git and Linux throughout development."
+    },
+    {
+      "id": "signecho",
+      "keys": [
+        "signecho",
+        "sign echo",
+        "sign language",
+        "sign",
+        "deaf",
+        "mediapipe",
+        "proud"
+      ],
+      "section": "proud",
+      "answer": "SignEcho explores gesture recognition and speech output using Python, MediaPipe, and OpenCV. The reported model accuracy is 79.6 percent. It won Apratim Srajan 2025 at IIST Indore, and the linked web interface demonstrates simulated translation separately."
+    },
+    {
+      "id": "archflow",
+      "keys": [
+        "archflow",
+        "arch flow",
+        "arc flow",
+        "arcflow",
+        "latest",
+        "system design",
+        "uml",
+        "srs"
+      ],
+      "section": "projects",
+      "answer": "ArchFlow turns a software idea into architecture diagrams, SQL schemas, and a software requirements document. It supports exports including PDF, DOCX, PNG, and SQL."
+    },
+    {
+      "id": "backend-pilot",
+      "keys": [
+        "backend pilot",
+        "pilot",
+        "generate backend",
+        "code generation",
+        "prompt to backend"
+      ],
+      "section": "projects",
+      "answer": "Backend Pilot uses Groq APIs and structured prompt pipelines to generate backend API code, project structure, and tests from natural-language requirements."
+    },
+    {
+      "id": "sera",
+      "keys": [
+        "sera",
+        "power line",
+        "power-line",
+        "fault",
+        "smart india",
+        "sih",
+        "lstm",
+        "edge ai"
+      ],
+      "section": "projects",
+      "answer": "SERA is a power-line monitoring prototype that won Smart India Hackathon 2025 for KSEBL. The public repository contains the Flask dashboard and telemetry interfaces; model and physical isolation integration are not included in that snapshot."
+    },
+    {
+      "id": "eduvote",
+      "keys": [
+        "eduvote",
+        "edu vote",
+        "voting",
+        "vote",
+        "election"
+      ],
+      "section": "projects",
+      "answer": "EduVote is a student election administration prototype built with React, Firebase Authentication, and Firestore. It includes administration pages and dashboard statistics, while the published student voting flow is incomplete."
+    },
+    {
+      "id": "saathi",
+      "keys": [
+        "saathi",
+        "sathi",
+        "medicine",
+        "health",
+        "dispenser",
+        "fall detection"
+      ],
+      "section": "projects",
+      "answer": "Saathi is an IoT medicine-dispenser and health-monitoring prototype with reminders, sensor data, and caregiver alerts. I contributed backend logic and sensor integration."
+    },
+    {
+      "id": "projects",
+      "keys": [
+        "projects",
+        "built",
+        "build",
+        "portfolio of work",
+        "what have you made",
+        "apps"
+      ],
+      "section": "projects",
+      "answer": "My projects cover computer vision, LLM applications, connected devices, and web software. SignEcho explores gesture recognition, Backend Pilot generates backend code, and SERA monitors power-line telemetry. Open a project card for its description, screenshots, and source or demonstration link."
+    },
+    {
+      "id": "ninja-rider",
+      "keys": [
+        "ninja rider",
+        "ninja",
+        "horse",
+        "3d game",
+        "three js",
+        "threejs",
+        "leaderboard"
+      ],
+      "section": "play",
+      "answer": "Ninja Rider is a browser game I built with Three.js. You have 90 seconds to ride, jump hurdles, collect spirit orbs, and slash targets, with scores on an online leaderboard. Try it in the Play section."
+    },
+    {
+      "id": "watch-tower",
+      "keys": [
+        "watch tower",
+        "watchtower",
+        "number plate",
+        "license plate",
+        "licence plate",
+        "ocr",
+        "cognizance",
+        "security"
+      ],
+      "section": "projects",
+      "answer": "Watch Tower uses Python, OpenCV, and EasyOCR to read vehicle number plates for campus security. The project was runner-up at Cognizance, IIT Roorkee."
+    },
+    {
+      "id": "sahara",
+      "keys": [
+        "sahara",
+        "social welfare",
+        "society",
+        "ngo",
+        "volunteer"
+      ],
+      "section": "projects",
+      "answer": "I built the website for SAHARA, the social welfare society of the IIT Madras BS degree program. It shares the society's mission, activities, events, and team."
+    },
+    {
+      "id": "jarvis",
+      "keys": [
+        "jarvis",
+        "voice assistant",
+        "desktop assistant",
+        "assistant"
+      ],
+      "section": "projects",
+      "answer": "Jarvis is a Python desktop assistant controlled by voice. It searches Wikipedia, opens websites and applications, plays music, tells the time, and speaks its replies."
+    },
+    {
+      "id": "wins",
+      "keys": [
+        "won",
+        "win",
+        "wins",
+        "award",
+        "awards",
+        "hackathon",
+        "hackathons",
+        "achievement",
+        "achievements",
+        "finalist",
+        "prize"
+      ],
+      "section": "achievements",
+      "answer": "I won Smart India Hackathon 2025 with SERA and Apratim Srajan 2025 with SignEcho. I was also a finalist at Hacksagon and S and T IISF, and runner-up at Cognizance, IIT Roorkee. Several certificates are linked in the achievements section."
+    },
+    {
+      "id": "experience",
+      "keys": [
+        "experience",
+        "work",
+        "worked",
+        "job",
+        "klover",
+        "company",
+        "companies"
+      ],
+      "section": "experience",
+      "answer": "I'm currently an undergraduate research intern at IIT Madras, working on dynamic programming and Safe Q-learning. From January to April 2025, I was an AI engineer intern at Klover AI, contributing AI agent prototypes through team meetings and iterative assignments."
+    },
+    {
+      "id": "education",
+      "keys": [
+        "education",
+        "study",
+        "studying",
+        "college",
+        "degree",
+        "university",
+        "graduate",
+        "graduation",
+        "iist",
+        "student"
+      ],
+      "section": "experience",
+      "answer": "I'm pursuing a B.Tech in Computer Science Engineering at IIST Indore alongside a BS in Data Science at IIT Madras. My expected graduation is in 2027."
+    },
+    {
+      "id": "contact",
+      "keys": [
+        "contact",
+        "email",
+        "reach",
+        "hire",
+        "phone",
+        "linkedin",
+        "github",
+        "talk",
+        "connect",
+        "resume"
+      ],
+      "section": "contact",
+      "answer": "You can email me at ankitp2412 at gmail dot com, connect on LinkedIn, or use the Let's talk form. My resume is linked on this page."
+    },
+    {
+      "id": "blog",
+      "keys": [
+        "blog",
+        "blogs",
+        "vlog",
+        "vlogs",
+        "write",
+        "writing",
+        "articles",
+        "posts",
+        "videos"
+      ],
+      "section": null,
+      "answer": "My blog covers the things I build and learn along the way. Open Blog at the top of the page to read the available posts."
+    },
+    {
+      "id": "play",
+      "keys": [
+        "game",
+        "games",
+        "play",
+        "fun",
+        "bored",
+        "bug squash",
+        "memory game",
+        "quiz"
+      ],
+      "section": "play",
+      "answer": "Try a quick game: squash bugs, match the cards from my tech stack, or identify the Indian scripts used in my surname. For a longer challenge, ride, jump, and slash in Ninja Rider."
+    },
+    {
+      "id": "how",
+      "keys": [
+        "how did you build",
+        "how was this built",
+        "this site",
+        "this website",
+        "voice",
+        "sarvam",
+        "wispr",
+        "made this"
+      ],
+      "section": "how",
+      "answer": "I built this portfolio with React and Tailwind CSS, using Framer Motion for animations and Lenis for smooth scrolling. Narration uses generated voice recordings, with browser speech synthesis as a fallback. Music is available through internet radio and Spotify."
+    }
+  ],
+  "fallback": "I don't have a prepared answer to that question. You can email me at ankitp2412 at gmail dot com."
 };
